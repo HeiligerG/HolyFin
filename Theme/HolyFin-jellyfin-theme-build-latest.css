@@ -390,7 +390,7 @@ body {
 
 .card-hoverable:hover .cardScalable,
 .card-hoverable:hover .visualCardBox {
-    border-color: rgba(59, 130, 246, 0.4) !important;
+    border-color: var(--darkerBorderColor) !important;
 }
 
 .card-hoverable:hover .visualCardBox .cardScalable {
@@ -4097,6 +4097,9 @@ for extended styling, use the add-on */
     min-width: 150px;
     min-height: 40px;
     display: inline-block;
+    /* Hide Jellyfin's default logo background */
+    background: none !important;
+    background-image: none !important;
 }
 
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
@@ -4108,7 +4111,7 @@ for extended styling, use the add-on */
     transform: translateY(-50%);
     width: 150px;
     height: 40px;
-    background-image: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg");
+    background-image: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg") !important;
     background-repeat: no-repeat;
     background-position: left center;
     background-size: contain;
