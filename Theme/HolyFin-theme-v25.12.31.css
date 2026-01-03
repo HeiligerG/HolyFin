@@ -1,49 +1,71 @@
-/* HolyFin Theme for Jellyfin by lscambo13 */
+/* HolyFin Theme for Jellyfin - Deep Indigo Edition */
+/* Based on ElegantFin by lscambo13 - Customized by HolyG */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
-/* @import url("https://cdn.jsdelivr.net/gh/lscambo13/HolyFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
+/* @import url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
 
 /* Inter Font Family */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-    --elegantFinFooterText: "HolyFin v25.12.31";
+    --holyFinFooterText: "HolyFin v1.0.0";
 
-    /* Base theme colors */
+    /* === HOLYFIN INDIGO COLOR SYSTEM === */
+    /* Primary Indigo Palette */
+    --holyfin-indigo-50: #E8EAF6;
+    --holyfin-indigo-100: #C5CAE9;
+    --holyfin-indigo-200: #9FA8DA;
+    --holyfin-indigo-300: #7986CB;
+    --holyfin-indigo-400: #5C6BC0;
+    --holyfin-indigo-500: #3F51B5;
+    --holyfin-indigo-600: #3949AB;
+    --holyfin-indigo-700: #303F9F;
+    --holyfin-indigo-800: #283593;
+    --holyfin-indigo-900: #1A237E;
+
+    /* Deep Purple Accents */
+    --holyfin-purple-400: #7E57C2;
+    --holyfin-purple-500: #673AB7;
+    --holyfin-purple-600: #5E35B1;
+    --holyfin-purple-700: #512DA8;
+    --holyfin-purple-800: #4527A0;
+
+    /* Base theme colors - Indigo Edition */
     color-scheme: dark;
-    --darkerGradientPoint: #111827;
-    --darkerGradientPointAlpha: rgba(17, 24, 39, 0.85);
-    --lighterGradientPoint: #1d2635;
-    --lighterGradientPointAlpha: rgba(29, 38, 53, 0.85);
-    --gradientPointAlpha: rgba(29, 38, 53, 0.3);
-    --headerColor: rgba(30, 40, 54, 0.8);
-    --drawerColor: rgba(30, 40, 54, 0.9);
+    --darkerGradientPoint: #0a0a0f;
+    --darkerGradientPointAlpha: rgba(10, 10, 15, 0.85);
+    --lighterGradientPoint: #1a1a2e;
+    --lighterGradientPointAlpha: rgba(26, 26, 46, 0.85);
+    --gradientPointAlpha: rgba(94, 53, 177, 0.15);
+    --headerColor: rgba(26, 26, 46, 0.8);
+    --drawerColor: rgba(26, 26, 46, 0.9);
 
-    --borderColor: hsl(214, 13%, 32%);
-    --darkerBorderColor: hsl(214, 13%, 22%);
-    --lighterBorderColor: hsla(0, 0%, 100%, 0.2);
+    --borderColor: rgba(94, 53, 177, 0.25);
+    --darkerBorderColor: rgba(94, 53, 177, 0.15);
+    --lighterBorderColor: rgba(126, 87, 194, 0.3);
 
-    --selectorBackgroundColor: rgb(55, 65, 81);
-    --selectorBackgroundColorAlpha: rgba(55, 65, 81, 0.5);
+    --selectorBackgroundColor: rgba(94, 53, 177, 0.2);
+    --selectorBackgroundColorAlpha: rgba(94, 53, 177, 0.3);
 
-    --activeColorAlpha: rgba(119, 91, 244, 0.9);
-    --activeColor: rgb(119, 91, 244);
-    --osdSeekBarPlayedColor: var(--textColor);
-    --osdSeekBarBufferedColorAlpha: rgba(128, 128, 128, 0.5);
-    --osdSeekBarThumbColor: white;
-    --tableBodyColor: rgb(31 41 55 / 1);
-    --uiAccentColor: rgb(117 111 226);
-    --btnMiniPlayColor: rgb(41 154 93);
+    /* HolyFin Primary Colors */
+    --activeColorAlpha: rgba(94, 53, 177, 0.9);
+    --activeColor: rgb(94, 53, 177);
+    --osdSeekBarPlayedColor: var(--holyfin-purple-600);
+    --osdSeekBarBufferedColorAlpha: rgba(126, 87, 194, 0.4);
+    --osdSeekBarThumbColor: var(--holyfin-purple-400);
+    --tableBodyColor: rgba(26, 26, 46, 0.8);
+    --uiAccentColor: rgb(94, 53, 177);
+    --btnMiniPlayColor: rgb(41, 154, 93);
     --btnMiniPlayBorderColor: rgb(50, 167, 105);
 
     /* Base component colors */
     --btnDeleteColor: rgb(169, 29, 29);
     --btnDeleteBorderColor: rgb(217, 84, 84);
-    --btnSubmitColor: rgb(61, 54, 178);
-    --btnSubmitBorderColor: rgb(117 111 226);
-    --checkboxCheckedBgColor: rgb(79, 70, 229);
-    --highlightOutlineColor: rgb(37, 99, 235);
+    --btnSubmitColor: var(--holyfin-purple-600);
+    --btnSubmitBorderColor: var(--holyfin-purple-400);
+    --checkboxCheckedBgColor: var(--holyfin-purple-600);
+    --highlightOutlineColor: var(--holyfin-purple-500);
 
     --defaultBorder: var(--borderWidth) solid var(--borderColor);
     --defaultLighterBorder: var(--borderWidth) solid var(--lighterBorderColor);
@@ -4050,3 +4072,210 @@ for extended styling, use the add-on */
 }
 
 /* basic styling for the Media Bar Plugin - end */
+
+/* ========================================= */
+/* HOLYFIN CUSTOM ENHANCEMENTS - START      */
+/* ========================================= */
+
+/* === HOLYFIN TEXT LOGO === */
+/* Replace Jellyfin logo with "HolyFin" text with indigo gradient */
+.pageTitle img[src*="logo"],
+.headerLogo img,
+.skinHeader-logo img,
+.adminDrawerLogo img {
+    visibility: hidden;
+    position: relative;
+    height: 40px;
+}
+
+.pageTitle img[src*="logo"]::after,
+.headerLogo img::after,
+.skinHeader-logo img::after,
+.adminDrawerLogo img::after {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "HolyFin";
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #5E35B1 0%, #7E57C2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 8px rgba(94, 53, 177, 0.3);
+}
+
+/* Mobile logo adjustments */
+@media (max-width: 768px) {
+    .pageTitle img[src*="logo"]::after,
+    .headerLogo img::after {
+        font-size: 1.5rem;
+    }
+}
+
+/* TV logo adjustments */
+@media (max-width: 1280px) and (min-width: 769px) {
+    .pageTitle img[src*="logo"]::after {
+        font-size: 2.2rem;
+    }
+}
+
+/* === ENHANCED INDIGO ANIMATIONS === */
+/* Smooth transitions everywhere */
+* {
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Enhanced button effects with indigo glow */
+.raised,
+.button-flat,
+.fab {
+    transition: all 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(94, 53, 177, 0.2);
+}
+
+.raised:hover,
+.button-flat:hover,
+.fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(94, 53, 177, 0.35);
+}
+
+.raised:active,
+.button-flat:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(94, 53, 177, 0.3);
+}
+
+/* === CARD GLASSMORPHISM === */
+.card,
+.itemTile {
+    background: rgba(94, 53, 177, 0.05) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(94, 53, 177, 0.12);
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.card:hover,
+.itemTile:hover {
+    background: rgba(94, 53, 177, 0.08) !important;
+    border-color: rgba(94, 53, 177, 0.3);
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* === PROGRESS BARS WITH INDIGO GLOW === */
+.itemProgressBar {
+    background: linear-gradient(90deg, #3949AB 0%, #5E35B1 50%, #673AB7 100%) !important;
+    box-shadow:
+        0 2px 8px rgba(94, 53, 177, 0.4),
+        0 0 12px rgba(94, 53, 177, 0.2);
+    border-radius: 4px;
+    height: 6px;
+}
+
+/* === CUSTOM INDIGO SCROLLBAR === */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(94, 53, 177, 0.05);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #5E35B1 0%, #673AB7 100%);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #7E57C2 0%, #5E35B1 100%);
+    background-clip: padding-box;
+}
+
+/* === ENHANCED FOCUS STATES === */
+*:focus-visible {
+    outline: 2px solid #5E35B1 !important;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* === INDIGO SPINNERS === */
+.mdl-spinner__circle-clipper .mdl-spinner__circle {
+    border-color: #5E35B1 !important;
+}
+
+/* === BADGES AND CHIPS === */
+.chip,
+.badge {
+    background: linear-gradient(135deg, #5E35B1 0%, #673AB7 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(94, 53, 177, 0.25);
+}
+
+/* === ENHANCED DIALOGS === */
+.dialogContainer,
+.dialogBackdrop {
+    box-shadow:
+        0 20px 60px rgba(94, 53, 177, 0.3),
+        0 0 1px rgba(94, 53, 177, 0.2);
+}
+
+/* === RIPPLE EFFECT === */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.button-flat::before,
+.raised::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.button-flat:active::before,
+.raised:active::before {
+    width: 300px;
+    height: 300px;
+    animation: ripple 0.6s ease-out;
+}
+
+/* === VERSION FOOTER === */
+.settingsContainer::after {
+    content: var(--holyFinFooterText) " | Based on ElegantFin by lscambo13";
+    display: block;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.85em;
+    color: #7E57C2;
+    opacity: 0.7;
+}
+
+/* ========================================= */
+/* HOLYFIN CUSTOM ENHANCEMENTS - END        */
+/* ========================================= */
