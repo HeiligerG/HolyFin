@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue v26.01.03-final2 */
+/* Version: Deep Blue v26.01.03-FINAL */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -327,7 +327,7 @@ body {
 
 .cardScalable {
     border-radius: var(--largeRadius);
-    border: var(--darkerBorderColor) solid var(--borderWidthDouble) !important;
+    border: none !important;
     overflow: hidden !important;
     box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.4);
     transition: transform 125ms;
@@ -347,26 +347,25 @@ body {
 }
 
 .layout-mobile .cardScalable {
-    border: var(--defaultBorder) !important;
+    border: none !important;
 }
 
 .visualCardBox,
 .paperList {
-    background-color: var(--headerColor) !important;
+    background-color: transparent !important;
     border-radius: var(--largeRadius) !important;
-    border: var(--defaultBorder) !important;
+    border: none !important;
     box-shadow: unset !important;
     overflow: hidden;
 }
 
 .layout-desktop .visualCardBox {
-    border-width: var(--borderWidthDouble) !important;
+    border: none !important;
 }
 
 .visualCardBox .cardScalable {
-    border-width: 0 0 var(--borderWidth) 0 !important;
+    border: none !important;
     border-radius: 0 !important;
-    border-color: var(--darkerBorderColor) !important;
 }
 
 .cardImageContainer {
@@ -4098,8 +4097,8 @@ for extended styling, use the add-on */
     background-image: none !important;
     content: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg") !important;
     display: inline-block !important;
-    width: 150px !important;
-    height: 40px !important;
+    width: 300px !important;
+    height: 80px !important;
     filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
     text-indent: -9999px !important;
     overflow: hidden !important;
