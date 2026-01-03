@@ -4077,50 +4077,34 @@ for extended styling, use the add-on */
 /* HOLYFIN CUSTOM ENHANCEMENTS - START */
 /* ========================================= */
 
-/* === HOLYFIN TEXT LOGO === */
-/* Replace Jellyfin logo with "HolyFin" text with indigo gradient */
+/* === HOLYFIN CUSTOM SVG LOGO === */
+/* Replace Jellyfin logo with HolyFin SVG logo */
 .pageTitle img[src*="logo"],
 .headerLogo img,
 .skinHeader-logo img,
-.adminDrawerLogo img{
- visibility:hidden;
- position:relative;
+.adminDrawerLogo img,
+.pageTitleWithLogo img{
+ content:url("https://raw.githubusercontent.com/HeiligerG/HolyFin/main/Theme/assets/img/holyfin-logo.svg");
  height:40px;
-}
-
-.pageTitle img[src*="logo"]::after,
-.headerLogo img::after,
-.skinHeader-logo img::after,
-.adminDrawerLogo img::after{
- visibility:visible;
- position:absolute;
- left:0;
- top:50%;
- transform:translateY(-50%);
- content:"HolyFin";
- font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
- font-size:1.8rem;
- font-weight:700;
- background:linear-gradient(135deg, #5E35B1 0%, #7E57C2 100%);
- -webkit-background-clip:text;
- -webkit-text-fill-color:transparent;
- background-clip:text;
- letter-spacing:-0.5px;
- text-shadow:0 2px 8px rgba(94, 53, 177, 0.3);
+ width:auto;
+ max-width:200px;
 }
 
 /* Mobile logo adjustments */
 @media (max-width:768px){
- .pageTitle img[src*="logo"]::after,
- .headerLogo img::after{
- font-size:1.5rem;
+ .pageTitle img[src*="logo"],
+ .headerLogo img,
+ .skinHeader-logo img,
+ .adminDrawerLogo img{
+ height:32px;
  }
 }
 
 /* TV logo adjustments */
 @media (max-width:1280px) and (min-width:769px){
- .pageTitle img[src*="logo"]::after{
- font-size:2.2rem;
+ .pageTitle img[src*="logo"],
+ .headerLogo img{
+ height:45px;
  }
 }
 
