@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.0.7 - PNG Logo Cache Fix */
+/* Version: Deep Blue Clean v1.0.8 - Medium Logo (50% smaller) */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -4202,10 +4202,10 @@ h3.pageTitle:focus-visible {
     box-shadow: none !important;
     padding: 0 !important;
 
-    /* Set container size - MASSIVE LOGO LEFT ALIGNED */
+    /* Set container size - MEDIUM LOGO LEFT ALIGNED */
     display: inline-block !important;
-    width: 351px !important;
-    height: 96px !important;
+    width: 176px !important;
+    height: 48px !important;
     margin: 0.5em 0 0.5em 0 !important;
     position: relative !important;
 }
@@ -4214,8 +4214,8 @@ h3.pageTitle:focus-visible {
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
     content: "" !important;
     display: block !important;
-    width: 351px !important;
-    height: 96px !important;
+    width: 176px !important;
+    height: 48px !important;
     background-image: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@v1.0.6/Theme/assets/img/holyfin-logo.png") !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
@@ -4250,7 +4250,7 @@ h3.pageTitle:focus-visible {
     display: none !important;
 }
 
-/* Mobile logo adjustments - MASSIVE AND LEFT ALIGNED */
+/* Mobile logo adjustments - MEDIUM AND LEFT ALIGNED */
 @media (max-width: 768px) {
     .skinHeader .headerLogo img[src*="logo"],
     .pageTitle.pageTitleWithLogo img[src*="logo"] {
@@ -4258,32 +4258,32 @@ h3.pageTitle:focus-visible {
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-        width: 260px !important;
-        height: 72px !important;
+        width: 130px !important;
+        height: 36px !important;
         margin: 0.5em 0 0.5em 0 !important;
         display: inline-block !important;
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
-        width: 260px !important;
-        height: 72px !important;
+        width: 130px !important;
+        height: 36px !important;
     }
 }
 
-/* TV logo adjustments - MASSIVE */
+/* TV logo adjustments - MEDIUM */
 @media (max-width: 1280px) and (min-width: 769px) {
     .pageTitle.pageTitleWithLogo img[src*="logo"] {
         height: 48px;
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-        width: 325px !important;
-        height: 88px !important;
+        width: 163px !important;
+        height: 44px !important;
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
-        width: 325px !important;
-        height: 88px !important;
+        width: 163px !important;
+        height: 44px !important;
     }
 }
 
