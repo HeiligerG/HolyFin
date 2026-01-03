@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.0.9 - Empty Library Placeholder */
+/* Version: Deep Blue Clean v1.0.10 - Fixed Placeholder Flash */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -4301,6 +4301,9 @@ h3.pageTitle:focus-visible {
     width: 100%;
     height: 50vh;
     text-align: center;
+    /* Prevent flash on load - only show after content is loaded */
+    opacity: 0;
+    animation: fadeInPlaceholder 0.3s ease-in 0.5s forwards;
 }
 
 .itemsContainer:empty::after,
@@ -4313,6 +4316,19 @@ h3.pageTitle:focus-visible {
     font-size: 1.5em;
     color: rgba(255, 255, 255, 0.3);
     font-weight: 300;
+    /* Prevent flash on load - only show after content is loaded */
+    opacity: 0;
+    animation: fadeInPlaceholder 0.3s ease-in 0.5s forwards;
+}
+
+/* Fade in animation for placeholder */
+@keyframes fadeInPlaceholder {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* === ENHANCED INDIGO ANIMATIONS === */
