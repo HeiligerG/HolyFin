@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Glassmorphism v26.01.03 */
+/* Version: Deep Blue Glassmorphism v0.9.2 */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -395,7 +395,7 @@ body {
 /* === MODERN GLASSMORPHISM HOVER EFFECTS === */
 .card-hoverable:hover .cardScalable {
     transform: translateY(-8px) scale(1.02);
-    background: rgba(37, 99, 235, 0.15);
+    background: transparent !important;
     border: 1px solid rgba(59, 130, 246, 0.3) !important;
     box-shadow:
         0 20px 60px rgba(37, 99, 235, 0.4),
@@ -404,7 +404,7 @@ body {
 }
 
 .card-hoverable:hover .visualCardBox {
-    background: rgba(37, 99, 235, 0.08);
+    background: transparent !important;
 }
 
 .card-hoverable:hover .visualCardBox .cardScalable {
@@ -1125,6 +1125,16 @@ body {
 .layout-desktop .sectionTitle,
 .layout-tv .sectionTitle {
     font-size: 1.5rem !important;
+}
+
+/* Remove title borders and shadows */
+h2,
+.sectionTitle,
+.sectionTitleTextButton,
+.sectionTitleContainer {
+    text-shadow: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .emby-scrollbuttons,
@@ -4109,17 +4119,19 @@ for extended styling, use the add-on */
     height: 0 !important;
 }
 
-/* Logo replacement - ENABLED */
+/* Logo replacement - ENABLED with corner positioning */
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
     background: none !important;
     background-image: none !important;
     content: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg") !important;
     display: inline-block !important;
-    width: 300px !important;
-    height: 80px !important;
+    width: 200px !important;
+    height: 60px !important;
     filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
     text-indent: -9999px !important;
     overflow: hidden !important;
+    margin: 0.5em 1em !important;
+    object-fit: contain;
 }
 
 /* Mobile logo adjustments */
