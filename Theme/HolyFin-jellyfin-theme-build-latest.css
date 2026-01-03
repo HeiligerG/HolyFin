@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v0.9.6 - Logo Border Fix */
+/* Version: Deep Blue Clean v0.9.7 - Logo 180x48 Fix */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -4180,14 +4180,14 @@ h3.pageTitle:focus-visible {
     box-shadow: none !important;
 }
 
-/* Logo replacement - ENABLED with clean minimal styling - NO BORDERS */
+/* Logo replacement - ENABLED with proper 180x48 dimensions - NO BORDERS */
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
     background: none !important;
     background-image: none !important;
     content: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg") !important;
     display: inline-block !important;
-    width: 160px !important;
-    height: 45px !important;
+    width: 180px !important;
+    height: 48px !important;
     filter: brightness(1.1);
     text-indent: -9999px !important;
     overflow: hidden !important;
