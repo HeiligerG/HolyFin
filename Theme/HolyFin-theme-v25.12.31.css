@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue v26.01.03-fix2 */
+/* Version: Deep Blue v26.01.03-fix3 */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -528,7 +528,7 @@ body {
 }
 
 .cardOverlayContainer:has(> button:hover) {
-    backdrop-filter: var(--blurDefault);
+    backdrop-filter: none !important;
 }
 
 .listViewUserDataButtons {
@@ -4092,21 +4092,24 @@ for extended styling, use the add-on */
     filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
 }
 
-/* Method 2: For empty h3 tags on homepage - direct content replacement */
+/* Logo replacement - DISABLED: Logo file does not exist in repository */
+/* To enable custom logo:
+   1. Add your logo SVG file to Theme/assets/img/holyfin-logo.svg
+   2. Uncomment the code below
+   3. Regenerate and push to GitHub
+
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-    /* Hide Jellyfin's default logo background completely */
     background: none !important;
     background-image: none !important;
-    /* Use direct content URL replacement */
     content: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg") !important;
     display: inline-block !important;
     width: 150px !important;
     height: 40px !important;
     filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
-    /* Force override any Jellyfin styling */
     text-indent: -9999px !important;
     overflow: hidden !important;
 }
+*/
 
 /* Mobile logo adjustments */
 @media (max-width: 768px) {
@@ -4175,17 +4178,17 @@ for extended styling, use the add-on */
 /* Subtle card styling without aggressive transforms */
 .card,
 .itemTile {
-    background: rgba(37, 99, 235, 0.04) !important;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(37, 99, 235, 0.08);
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: none !important;
     transition: all 0.25s ease-out;
 }
 
 .card:hover,
 .itemTile:hover {
-    background: rgba(37, 99, 235, 0.06) !important;
-    border-color: rgba(37, 99, 235, 0.2);
-    /* Removed box-shadow to eliminate square shadow effect */
+    background: transparent !important;
+    border: none !important;
+    /* Removed all backdrop, background, and borders */
 }
 
 /* === PROGRESS BARS WITH BLUE GLOW === */
