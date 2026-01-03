@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.0.3 - Logo Left Aligned */
+/* Version: Deep Blue Clean v1.0.4 - Logo Fully Left (Fixed Padding) */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -4154,6 +4154,12 @@ for extended styling, use the add-on */
     height: 0 !important;
 }
 
+/* Force headerTop to have zero left padding when logo is present */
+.headerTop:has(.pageTitle.pageTitleWithLogo) {
+    padding-left: 0 !important;
+    text-align: left !important;
+}
+
 /* Remove ALL borders and outlines from logo parent containers */
 .pageTitle,
 .pageTitle.pageTitleWithLogo,
@@ -4166,6 +4172,7 @@ h3.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo,
     outline: none !important;
     box-shadow: none !important;
     background: transparent !important;
+    text-align: left !important;
 }
 
 /* Remove focus state borders and outlines */
