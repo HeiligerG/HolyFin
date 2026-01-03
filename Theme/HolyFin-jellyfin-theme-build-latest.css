@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.0.4 - Logo Fully Left (Fixed Padding) */
+/* Version: Deep Blue Clean v1.0.5 - PNG Logo */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -4216,7 +4216,7 @@ h3.pageTitle:focus-visible {
     display: block !important;
     width: 351px !important;
     height: 96px !important;
-    background-image: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg") !important;
+    background-image: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.png") !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
