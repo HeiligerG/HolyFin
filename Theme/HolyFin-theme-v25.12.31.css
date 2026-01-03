@@ -1,4 +1,4 @@
-/* HolyFin Theme for Jellyfin - Deep Indigo Edition */
+/* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
 
 /* Add-ons: Uncomment to enable */
@@ -11,61 +11,60 @@
 :root {
     --holyFinFooterText: "HolyFin v1.0.0";
 
-    /* === HOLYFIN INDIGO COLOR SYSTEM === */
-    /* Primary Indigo Palette */
-    --holyfin-indigo-50: #E8EAF6;
-    --holyfin-indigo-100: #C5CAE9;
-    --holyfin-indigo-200: #9FA8DA;
-    --holyfin-indigo-300: #7986CB;
-    --holyfin-indigo-400: #5C6BC0;
-    --holyfin-indigo-500: #3F51B5;
-    --holyfin-indigo-600: #3949AB;
-    --holyfin-indigo-700: #303F9F;
-    --holyfin-indigo-800: #283593;
-    --holyfin-indigo-900: #1A237E;
+    /* === HOLYFIN DEEP BLUE COLOR SYSTEM === */
+    /* Elegant Deep Blue Palette */
+    --holyfin-blue-50: #eff6ff;
+    --holyfin-blue-100: #dbeafe;
+    --holyfin-blue-200: #bfdbfe;
+    --holyfin-blue-300: #93c5fd;
+    --holyfin-blue-400: #60a5fa;
+    --holyfin-blue-500: #3b82f6;
+    --holyfin-blue-600: #2563eb;
+    --holyfin-blue-700: #1d4ed8;
+    --holyfin-blue-800: #1e40af;
+    --holyfin-blue-900: #1e3a8a;
+    --holyfin-blue-950: #172554;
 
-    /* Deep Purple Accents */
-    --holyfin-purple-400: #7E57C2;
-    --holyfin-purple-500: #673AB7;
-    --holyfin-purple-600: #5E35B1;
-    --holyfin-purple-700: #512DA8;
-    --holyfin-purple-800: #4527A0;
+    /* Cyan Accents for Play Button */
+    --holyfin-cyan-400: #22d3ee;
+    --holyfin-cyan-500: #06b6d4;
+    --holyfin-cyan-600: #0891b2;
 
-    /* Base theme colors - Indigo Edition */
+    /* Base theme colors - Deep Blue Edition */
     color-scheme: dark;
-    --darkerGradientPoint: #0a0a0f;
-    --darkerGradientPointAlpha: rgba(10, 10, 15, 0.85);
-    --lighterGradientPoint: #1a1a2e;
-    --lighterGradientPointAlpha: rgba(26, 26, 46, 0.85);
-    --gradientPointAlpha: rgba(94, 53, 177, 0.15);
-    --headerColor: rgba(26, 26, 46, 0.8);
-    --drawerColor: rgba(26, 26, 46, 0.9);
+    --darkerGradientPoint: #0a0e1a;
+    --darkerGradientPointAlpha: rgba(10, 14, 26, 0.85);
+    --lighterGradientPoint: #1a1f3a;
+    --lighterGradientPointAlpha: rgba(26, 31, 58, 0.85);
+    --gradientPointAlpha: rgba(30, 58, 138, 0.15);
+    --headerColor: rgba(23, 37, 84, 0.8);
+    --drawerColor: rgba(23, 37, 84, 0.9);
 
-    --borderColor: rgba(94, 53, 177, 0.25);
-    --darkerBorderColor: rgba(94, 53, 177, 0.15);
-    --lighterBorderColor: rgba(126, 87, 194, 0.3);
+    --borderColor: rgba(37, 99, 235, 0.25);
+    --darkerBorderColor: rgba(37, 99, 235, 0.15);
+    --lighterBorderColor: rgba(59, 130, 246, 0.3);
 
-    --selectorBackgroundColor: rgba(94, 53, 177, 0.2);
-    --selectorBackgroundColorAlpha: rgba(94, 53, 177, 0.3);
+    --selectorBackgroundColor: rgba(37, 99, 235, 0.2);
+    --selectorBackgroundColorAlpha: rgba(37, 99, 235, 0.3);
 
     /* HolyFin Primary Colors */
-    --activeColorAlpha: rgba(94, 53, 177, 0.9);
-    --activeColor: rgb(94, 53, 177);
-    --osdSeekBarPlayedColor: var(--holyfin-purple-600);
-    --osdSeekBarBufferedColorAlpha: rgba(126, 87, 194, 0.4);
-    --osdSeekBarThumbColor: var(--holyfin-purple-400);
-    --tableBodyColor: rgba(26, 26, 46, 0.8);
-    --uiAccentColor: rgb(94, 53, 177);
-    --btnMiniPlayColor: rgb(41, 154, 93);
-    --btnMiniPlayBorderColor: rgb(50, 167, 105);
+    --activeColorAlpha: rgba(37, 99, 235, 0.9);
+    --activeColor: rgb(37, 99, 235);
+    --osdSeekBarPlayedColor: var(--holyfin-blue-600);
+    --osdSeekBarBufferedColorAlpha: rgba(59, 130, 246, 0.4);
+    --osdSeekBarThumbColor: var(--holyfin-blue-500);
+    --tableBodyColor: rgba(23, 37, 84, 0.8);
+    --uiAccentColor: rgb(37, 99, 235);
+    --btnMiniPlayColor: var(--holyfin-cyan-500);
+    --btnMiniPlayBorderColor: var(--holyfin-cyan-400);
 
     /* Base component colors */
     --btnDeleteColor: rgb(169, 29, 29);
     --btnDeleteBorderColor: rgb(217, 84, 84);
-    --btnSubmitColor: var(--holyfin-purple-600);
-    --btnSubmitBorderColor: var(--holyfin-purple-400);
-    --checkboxCheckedBgColor: var(--holyfin-purple-600);
-    --highlightOutlineColor: var(--holyfin-purple-500);
+    --btnSubmitColor: var(--holyfin-blue-600);
+    --btnSubmitBorderColor: var(--holyfin-blue-500);
+    --checkboxCheckedBgColor: var(--holyfin-blue-600);
+    --highlightOutlineColor: var(--holyfin-blue-600);
 
     --defaultBorder: var(--borderWidth) solid var(--borderColor);
     --defaultLighterBorder: var(--borderWidth) solid var(--lighterBorderColor);
@@ -391,7 +390,7 @@ body {
 
 .card-hoverable:hover .cardScalable,
 .card-hoverable:hover .visualCardBox {
-    border-color: white !important;
+    border-color: rgba(59, 130, 246, 0.4) !important;
 }
 
 .card-hoverable:hover .visualCardBox .cardScalable {
@@ -4077,51 +4076,54 @@ for extended styling, use the add-on */
 /* HOLYFIN CUSTOM ENHANCEMENTS - START      */
 /* ========================================= */
 
-/* === HOLYFIN TEXT LOGO === */
-/* Replace Jellyfin logo with "HolyFin" text with indigo gradient */
+/* === HOLYFIN LOGO REPLACEMENT === */
+/* Replace Jellyfin logo with HolyFin SVG logo from CDN */
 /* VERY SPECIFIC SELECTORS - DO NOT MAKE THESE MORE GENERIC OR MEDIA IMAGES WILL BREAK */
+
+/* Method 1: For img tags - replace with SVG */
 .skinHeader .headerLogo img[src*="logo"],
 .skinHeader .skinHeader-logo img[src*="logo"],
 .pageTitle.pageTitleWithLogo img[src*="logo"],
 .adminDrawerLogo img[src*="logo"] {
-    visibility: hidden;
-    position: relative;
+    content: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg");
     height: 40px;
+    width: auto;
+    filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
 }
 
-.skinHeader .headerLogo img[src*="logo"]::after,
-.skinHeader .skinHeader-logo img[src*="logo"]::after,
-.pageTitle.pageTitleWithLogo img[src*="logo"]::after,
-.adminDrawerLogo img[src*="logo"]::after {
-    visibility: visible;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    content: "HolyFin";
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #5E35B1 0%, #7E57C2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: -0.5px;
-    text-shadow: 0 2px 8px rgba(94, 53, 177, 0.3);
+/* Method 2: For empty h3 tags - use background-image */
+.pageTitle.pageTitleWithLogo:not(:has(img)) {
+    background-image: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    height: 40px;
+    width: 150px;
+    filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
 }
 
 /* Mobile logo adjustments */
 @media (max-width: 768px) {
-    .skinHeader .headerLogo img[src*="logo"]::after,
-    .pageTitle.pageTitleWithLogo img[src*="logo"]::after {
-        font-size: 1.5rem;
+    .skinHeader .headerLogo img[src*="logo"],
+    .pageTitle.pageTitleWithLogo img[src*="logo"] {
+        height: 32px;
+    }
+
+    .pageTitle.pageTitleWithLogo:not(:has(img)) {
+        height: 32px;
+        width: 120px;
     }
 }
 
 /* TV logo adjustments */
 @media (max-width: 1280px) and (min-width: 769px) {
-    .pageTitle.pageTitleWithLogo img[src*="logo"]::after {
-        font-size: 2.2rem;
+    .pageTitle.pageTitleWithLogo img[src*="logo"] {
+        height: 48px;
+    }
+
+    .pageTitle.pageTitleWithLogo:not(:has(img)) {
+        height: 48px;
+        width: 180px;
     }
 }
 
@@ -4153,65 +4155,66 @@ for extended styling, use the add-on */
     box-shadow: 0 1px 4px rgba(94, 53, 177, 0.3);
 }
 
-/* === CARD GLASSMORPHISM === */
+/* === CARD ENHANCEMENTS === */
+/* Subtle card styling without aggressive transforms */
 .card,
 .itemTile {
-    background: rgba(94, 53, 177, 0.05) !important;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(94, 53, 177, 0.12);
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    background: rgba(37, 99, 235, 0.04) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(37, 99, 235, 0.08);
+    transition: all 0.25s ease-out;
 }
 
 .card:hover,
 .itemTile:hover {
-    background: rgba(94, 53, 177, 0.08) !important;
-    border-color: rgba(94, 53, 177, 0.3);
-    transform: translateY(-4px) scale(1.02);
+    background: rgba(37, 99, 235, 0.06) !important;
+    border-color: rgba(37, 99, 235, 0.2);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
 }
 
-/* === PROGRESS BARS WITH INDIGO GLOW === */
+/* === PROGRESS BARS WITH BLUE GLOW === */
 .itemProgressBar {
-    background: linear-gradient(90deg, #3949AB 0%, #5E35B1 50%, #673AB7 100%) !important;
+    background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 50%, #3b82f6 100%) !important;
     box-shadow:
-        0 2px 8px rgba(94, 53, 177, 0.4),
-        0 0 12px rgba(94, 53, 177, 0.2);
+        0 2px 8px rgba(37, 99, 235, 0.4),
+        0 0 12px rgba(37, 99, 235, 0.2);
     border-radius: 4px;
     height: 6px;
 }
 
-/* === CUSTOM INDIGO SCROLLBAR === */
+/* === CUSTOM DEEP BLUE SCROLLBAR === */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(94, 53, 177, 0.05);
+    background: rgba(37, 99, 235, 0.05);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #5E35B1 0%, #673AB7 100%);
+    background: linear-gradient(180deg, #2563eb 0%, #3b82f6 100%);
     border-radius: 5px;
     border: 2px solid transparent;
     background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #7E57C2 0%, #5E35B1 100%);
+    background: linear-gradient(180deg, #60a5fa 0%, #2563eb 100%);
     background-clip: padding-box;
 }
 
 /* === ENHANCED FOCUS STATES === */
 *:focus-visible {
-    outline: 2px solid #5E35B1 !important;
+    outline: 2px solid #2563eb !important;
     outline-offset: 2px;
     border-radius: 4px;
 }
 
-/* === INDIGO SPINNERS === */
+/* === BLUE SPINNERS === */
 .mdl-spinner__circle-clipper .mdl-spinner__circle {
-    border-color: #5E35B1 !important;
+    border-color: #2563eb !important;
 }
 
 /* === BADGES AND CHIPS === */
