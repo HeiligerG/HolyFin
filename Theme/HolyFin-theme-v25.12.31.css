@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue v26.01.03-final */
+/* Version: Deep Blue v26.01.03-final2 */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -41,9 +41,9 @@
     --headerColor: rgba(23, 37, 84, 0.8);
     --drawerColor: rgba(23, 37, 84, 0.9);
 
-    --borderColor: rgba(37, 99, 235, 0.25);
-    --darkerBorderColor: rgba(37, 99, 235, 0.15);
-    --lighterBorderColor: rgba(59, 130, 246, 0.3);
+    --borderColor: transparent;
+    --darkerBorderColor: transparent;
+    --lighterBorderColor: transparent;
 
     --selectorBackgroundColor: rgba(37, 99, 235, 0.2);
     --selectorBackgroundColorAlpha: rgba(37, 99, 235, 0.3);
@@ -391,11 +391,13 @@ body {
 
 .card-hoverable:hover .cardScalable,
 .card-hoverable:hover .visualCardBox {
-    border-color: var(--darkerBorderColor) !important;
+    border-color: transparent !important;
+    border: none !important;
 }
 
 .card-hoverable:hover .visualCardBox .cardScalable {
-    border-color: var(--darkerBorderColor) !important;
+    border-color: transparent !important;
+    border: none !important;
 }
 
 .card-hoverable:hover .cardImageContainer {
@@ -4081,15 +4083,13 @@ for extended styling, use the add-on */
 /* Replace Jellyfin logo with HolyFin SVG logo from CDN */
 /* VERY SPECIFIC SELECTORS - DO NOT MAKE THESE MORE GENERIC OR MEDIA IMAGES WILL BREAK */
 
-/* Method 1: For img tags - replace with SVG using content property */
+/* Method 1: For img tags - HIDE COMPLETELY to prevent double logo */
 .skinHeader .headerLogo img[src*="logo"],
 .skinHeader .skinHeader-logo img[src*="logo"],
 .pageTitle.pageTitleWithLogo img[src*="logo"],
 .adminDrawerLogo img[src*="logo"] {
-    content: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg");
-    height: 40px;
-    width: auto;
-    filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
+    display: none !important;
+    visibility: hidden !important;
 }
 
 /* Logo replacement - ENABLED */
