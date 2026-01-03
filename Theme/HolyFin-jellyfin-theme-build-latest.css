@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v0.9.9 - Logo Background-Image Method */
+/* Version: Deep Blue Clean v1.0.0 - Larger Logo */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -4195,10 +4195,10 @@ h3.pageTitle:focus-visible {
     box-shadow: none !important;
     padding: 0 !important;
 
-    /* Set container size */
+    /* Set container size - LARGER LOGO */
     display: inline-block !important;
-    width: 180px !important;
-    height: 48px !important;
+    width: 220px !important;
+    height: 60px !important;
     margin: 0.8em 0 0.8em 1.2em !important;
     position: relative !important;
 }
@@ -4207,8 +4207,8 @@ h3.pageTitle:focus-visible {
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
     content: "" !important;
     display: block !important;
-    width: 180px !important;
-    height: 48px !important;
+    width: 220px !important;
+    height: 60px !important;
     background-image: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg") !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
@@ -4251,14 +4251,14 @@ h3.pageTitle:focus-visible {
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-        width: 130px !important;
-        height: 36px !important;
+        width: 160px !important;
+        height: 44px !important;
         margin: 0.6em 0 0.6em 1em !important;
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
-        width: 130px !important;
-        height: 36px !important;
+        width: 160px !important;
+        height: 44px !important;
     }
 }
 
@@ -4269,13 +4269,13 @@ h3.pageTitle:focus-visible {
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-        min-width: 180px;
-        min-height: 48px;
+        width: 200px !important;
+        height: 54px !important;
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
-        width: 180px;
-        height: 48px;
+        width: 200px !important;
+        height: 54px !important;
     }
 }
 
