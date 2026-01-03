@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v0.9.5 */
+/* Version: Deep Blue Clean v0.9.6 - Logo Border Fix */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -4154,7 +4154,33 @@ for extended styling, use the add-on */
     height: 0 !important;
 }
 
-/* Logo replacement - ENABLED with clean minimal styling */
+/* Remove ALL borders and outlines from logo parent containers */
+.pageTitle,
+.pageTitle.pageTitleWithLogo,
+h3.pageTitle,
+h3.pageTitle.pageTitleWithLogo,
+h3.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo,
+.skinHeader .pageTitle,
+.skinHeader h3 {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Remove focus state borders and outlines */
+.pageTitle:focus,
+.pageTitle:focus-visible,
+.pageTitle.pageTitleWithLogo:focus,
+.pageTitle.pageTitleWithLogo:focus-visible,
+h3.pageTitle:focus,
+h3.pageTitle:focus-visible {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Logo replacement - ENABLED with clean minimal styling - NO BORDERS */
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
     background: none !important;
     background-image: none !important;
@@ -4168,9 +4194,26 @@ for extended styling, use the add-on */
     margin: 0.8em 0 0.8em 1.2em !important;
     padding: 0 !important;
     border: none !important;
+    outline: none !important;
     box-shadow: none !important;
     object-fit: contain;
     vertical-align: middle;
+}
+
+/* Remove borders from logo focus state */
+.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo:focus,
+.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo:focus-visible {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove any pseudo-element borders */
+.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before,
+.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::after {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 /* Mobile logo adjustments */
