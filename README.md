@@ -1,347 +1,246 @@
-<!-- Banner Image -->
-<img src="https://github.com/lscambo13/HolyFin/blob/main/Theme/assets/img/banner.png?raw=true" alt="HolyFin Theme for Jellyfin - Banner">
+# 🎨 HolyFin - Premium Indigo Jellyfin Theme
 
 <div align="center">
-  <a href="https://www.jsdelivr.com/package/gh/lscambo13/HolyFin">
-    <img
-      src="https://img.shields.io/jsdelivr/gh/hm/lscambo13/HolyFin?style=flat&logo=jsdelivr&logoColor=%23f65e34&label=jsDelivr%20Hits&labelColor=white&color=%23f65e34"
-      alt="jsDelivr Requests"
-    />
-  </a>
-  <br>
-  <a href="https://github.com/lscambo13/HolyFin/stargazers">
-    <img
-      src="https://img.shields.io/github/stars/lscambo13/HolyFin?style=flat&logo=github&logoColor=%231f2328&label=GitHub%20Stars&labelColor=white&color=%231f2328"
-      alt="GitHub Repo stars"
-    />
-  </a>
+
+![HolyFin Banner](Theme/assets/img/banner.png)
+
+[![jsDelivr](https://img.shields.io/jsdelivr/gh/hm/HeiligerG/HolyFin?style=flat&logo=jsdelivr&logoColor=%23f65e34&label=jsDelivr%20Hits&labelColor=white&color=%23f65e34)](https://www.jsdelivr.com/package/gh/HeiligerG/HolyFin)
+[![GitHub Stars](https://img.shields.io/github/stars/HeiligerG/HolyFin?style=flat&logo=github&logoColor=%231f2328&label=GitHub%20Stars&labelColor=white&color=%231f2328)](https://github.com/HeiligerG/HolyFin/stargazers)
+[![License](https://img.shields.io/github/license/HeiligerG/HolyFin?style=flat&label=License&labelColor=white&color=%235e35b1)](LICENSE)
+
+**A sophisticated Jellyfin theme with deep indigo aesthetics**
+
+*Based on the excellent [ElegantFin](https://github.com/lscambo13/ElegantFin) by lscambo13*
+
+[Quick Start](#-quick-installation) • [Features](#-features) • [Customization](#-customization) • [Credits](#-credits)
+
 </div>
 
-## ⭐ HolyFin Theme
+---
 
-This is a Jellyfin theme inspired from Jellyseerr to improve the overall look and experience with various fixes to the UI/UX. It gives Jellyfin a fresh, modern look, and it aims to work on mobile, desktop, and TV, with just one import.
+## ✨ Features
 
-#### **Author:** [lscambo13](https://github.com/lscambo13)
+- 🎨 **Deep Indigo Color Palette** - Sophisticated purple-blue tones throughout
+- 🎯 **HolyFin Branding** - Custom "HolyFin" text logo with gradient
+- 📱 **Universal Compatibility** - Works on desktop, mobile, and TV
+- 🎬 **Modern Layouts** - Clean, contemporary design language
+- ⚡ **Smooth Animations** - Polished transitions and hover effects
+- 💎 **Glassmorphism Effects** - Beautiful frosted glass aesthetics
+- 🌈 **Indigo Progress Bars** - Vibrant gradient progress indicators
+- 🔧 **Highly Customizable** - Easy CSS variable overrides
+- 🌐 **CDN Delivery** - Fast loading via jsDelivr
 
-<hr>
+---
 
-### ✨ Key Features
+## 🚀 Quick Installation
 
--   modern layouts and color tones
--   new and improved animations on most elements
--   rounded corners and even spacing everywhere
--   stylish borders, hover effects and shadows
--   neat layout that puts important stuff up front
--   reduced unnecessary clutter
--   various fixes to improve the user experience
--   same clean design across phone, desktop, and TV
+### Method 1: CDN Import (Recommended)
 
-<hr>
+1. Open Jellyfin **Dashboard** → **General** (or **Branding** on 10.11.X)
+2. Scroll to **Custom CSS** section
+3. Paste this code:
 
-### 🖼️ Theme Showcase
-
-Captured on HolyFin v25.08.02
-
-<details>
-  <summary> 💻 <i>Desktop and </i>📱 <i>Mobile Screenshots</i></summary>
-
-| Desktop                                                                                                                                                                                                              | Mobile                                                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/21.%20Login%20Page.webp?raw=true"><br><strong>Login Page</strong></div>                | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/21.%20Login%20Page.webp?raw=true"></div>        |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/1.%20Homepage.webp?raw=true"><br><strong>Homepage</strong></div>                       | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/1.%20Homepage.webp?raw=true"></div>             |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/2.%20Movies%20Library.webp?raw=true"><br><strong>Movies Library</strong></div>         | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/2.%20Movies%20Library.webp?raw=true"></div>     |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/4.%20Movie%20Page.webp?raw=true"><br><strong>Movie Page</strong></div>                 | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/4.%20Movie%20Page.webp?raw=true"></div>         |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/12.%20Movie%20Details.webp?raw=true"><br><strong>Movie Details</strong></div>          | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/12.%20Movie%20Details.webp?raw=true"></div>     |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/11.%20TV%20Show%20Page.webp?raw=true"><br><strong>TV Show Page</strong></div>          | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/11.%20TV%20Show%20Page.webp?raw=true"></div>    |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/18.%20TV%20Episode%20Page.webp?raw=true"><br><strong>TV Episode Page</strong></div>    | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/18.%20TV%20Episode%20Page.webp?raw=true"></div> |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/16.%20TV%20Show%20Seasons.webp?raw=true"><br><strong>TV Show Seasons</strong></div>    | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/16.%20TV%20Show%20Seasons.webp?raw=true"></div> |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/9.%20Web%20Player.webp?raw=true"><br><strong>Web Player</strong></div>                 | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/9.%20Web%20Player.webp?raw=true"></div>         |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/17.%20Cast%20Page.webp?raw=true"><br><strong>Cast Page</strong></div>                  | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/17.%20Cast%20Page.webp?raw=true"></div>         |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/14.%20Artist%20Page.webp?raw=true"><br><strong>Artist Page</strong></div>              | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/14.%20Artist%20Page.webp?raw=true"></div>       |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/15.%20Music%20Player.webp?raw=true"><br><strong>Music Player</strong></div>            | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/15.%20Music%20Player.webp?raw=true"></div>      |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/13.%20Book%20Page.webp?raw=true"><br><strong>Book Page</strong></div>                  | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/13.%20Book%20Page.webp?raw=true"></div>         |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/3.%20Sidebar.webp?raw=true"><br><strong>Sidebar</strong></div>                         | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/3.%20Sidebar.webp?raw=true"></div>              |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/5.%20Extra%20Dialog.webp?raw=true"><br><strong>Extra Dialog</strong></div>             | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/5.%20Extra%20Dialog.webp?raw=true"></div>       |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/6.%20Settings%20Page.webp?raw=true"><br><strong>Settings Page</strong></div>           | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/6.%20Settings%20Page.webp?raw=true"></div>      |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/7.%20Metadata%20Menu.webp?raw=true"><br><strong>Metadata Menu</strong></div>           | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/7.%20Metadata%20Menu.webp?raw=true"></div>      |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/8.%20Dashboard%20Settings.webp?raw=true"><br><strong>Dashboard Settings</strong></div> | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/8.%20Dashboard%20Settings.webp?raw=true"></div> |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/19.%20Live%20TV%20Page.webp?raw=true"><br><strong>Live TV Page</strong></div>          | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/19.%20Live%20TV%20Page.webp?raw=true"></div>    |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/desktop/20.%20Live%20TV%20Guide.webp?raw=true"><br><strong>Live TV Guide</strong></div>        | <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/mobile/20.%20Live%20TV%20Guide.webp?raw=true"></div>   |
-
-</details>
-
-<details>
-  <summary> 📺 <i>TV Screenshots</i></summary>
-
-| TV View                                                                                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/21.%20Login%20Page.webp?raw=true"><br><strong>Login Page</strong></div>             |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/1.%20Homepage.webp?raw=true"><br><strong>Homepage</strong></div>                    |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/2.%20Movies%20Library.webp?raw=true"><br><strong>Movies Library</strong></div>      |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/4.%20Movie%20Page.webp?raw=true"><br><strong>Movie Page</strong></div>              |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/5.%20Extra%20Dialog.webp?raw=true"><br><strong>Extra Dialog</strong></div>          |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/6.%20Settings%20Page.webp?raw=true"><br><strong>Settings Page</strong></div>        |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/9.%20Web%20Player.webp?raw=true"><br><strong>Web Player</strong></div>              |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/11.%20TV%20Show%20Page.webp?raw=true"><br><strong>TV Show Page</strong></div>       |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/12.%20Movie%20Details.webp?raw=true"><br><strong>Movie Details</strong></div>       |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/13.%20Book%20Page.webp?raw=true"><br><strong>Book Page</strong></div>               |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/14.%20Artist%20Page.webp?raw=true"><br><strong>Artist Page</strong></div>           |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/15.%20Music%20Player.webp?raw=true"><br><strong>Music Player</strong></div>         |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/16.%20TV%20Show%20Seasons.webp?raw=true"><br><strong>TV Show Seasons</strong></div> |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/17.%20Cast%20Page.webp?raw=true"><br><strong>Cast Page</strong></div>               |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/18.%20TV%20Episode%20Page.webp?raw=true"><br><strong>TV Episode Page</strong></div> |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/19.%20Live%20TV%20Page.webp?raw=true"><br><strong>Live TV Page</strong></div>       |
-| <div align="center"><img src="https://github.com/lscambo13/HolyFin/blob/main/Previews/previews-v25.08.02/optimized/tv/20.%20Live%20TV%20Guide.webp?raw=true"><br><strong>Live TV Guide</strong></div>     |
-
-</details>
-
-https://github.com/user-attachments/assets/bb7f3174-b703-4c98-a23c-e6bb4abba390
-
-<hr>
-
-### 👇 How to install/setup this theme?
-
-<b>Paste the following in Custom CSS code box:</b>
-
-    @import url("https://cdn.jsdelivr.net/gh/lscambo13/HolyFin@main/Theme/HolyFin-jellyfin-theme-build-latest-minified.css");
-
-<details>
-  <summary><i>Detailed steps for server-side implementation</i></summary>
-
-1. Open Dashboard from Administration tab in Settings.
-2. From the side bar, select the Branding tab if you are on Jellyfin 10.11.X or the General tab on older version.
-3. Scroll down to find Custom CSS code box.
-4. Paste the custom css in Custom CSS code box.
-5. Click save
- </details>
-
-<details>
-  <summary><i>Detailed steps for client-side implementation</i></summary>
-
-1. Open Display tab in Settings.
-2. Scroll down to find Custom CSS code box.
-3. Paste the custom css in Custom CSS code box.
-4. Click save.
- </details>
-
-<hr>
-
-### 🧩 How to customise this theme?
-
-<details>
-  <summary><i>1. Custom media covers for user media libraries</i></summary>
-
-<img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/05eb7cb6-3ac9-444b-8988-9776e0815664" />
-
--   Read more about this experimental add-on [here](https://github.com/lscambo13/HolyFin/blob/main/custom-media-covers.md)
-
-</details>
-
-<details>
-  <summary><i>2. Custom background image for the login page</i></summary>
-
-<img width="auto" height="350" alt="image" src="https://github.com/user-attachments/assets/70834545-d1cd-4496-975a-4310030dedd9" />
-<img width="auto" height="350" alt="image" src="https://github.com/user-attachments/assets/c3cf2d96-0db0-4acb-bc61-7b08d5445452" />
-
--   Note: this customisation is not needed on Jellyfin 10.11.X anymore
-
--   On older Jellyfin versions, to enable the background wallpaper on the login screen, first tick the 'Enable the splash screen' option in your Jellyfin Dashboard below the Custom CSS Box.
--   Second, copy and paste the following code at the end in Custom CSS box but don't save yet.
-    ```
-    :root{
-      --loginPageBgUrl: url("<YOUR-JELLYFIN-SERVER-ADDRESS>/Branding/Splashscreen?format=webp&foregroundLayer=1&quality=33&width=3840&height=2160&blur=2");
-    }
-    ```
--   Third, replace `<YOUR-JELLYFIN-SERVER-ADDRESS>` with your Jellyfin server address, for example, `http://192.168.0.1:8096`.
--   Don't forget the correct http or https in your domain.
--   You can also modify the parameters, for example blur size or the resolution, according to your liking.
--   Once done, save and refresh your apps and webpages.
-</details>
-
-<details>
-  <summary><i>3. Enable extra overlay buttons on cards on desktop</i></summary>
-
-  <img width="400" height="auto" alt="image" src="https://github.com/user-attachments/assets/cb8479c2-c577-4d54-a567-697f54291a3b" />
-
--   To enable 'Mark Played' and 'Add to Favorites' buttons that show up at the bottom right corner of cards while hovering, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
-    ```
-    :root{
-      --extraCardButtonsVisibility: block;
-    }
-    ```
--   To hide them again, simply remove this code block or replace `block` with `none`.
-</details>
-
-<details>
-  <summary><i>4. Place the overlay play button at the center of cards on desktop</i></summary>
-
-  <img width="400" height="auto" alt="image" src="https://github.com/user-attachments/assets/ebde9db6-cd2f-47b5-bdb9-cee1e9852e2e" />
-
--   To bring the mini play button to the center of cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
-    ```
-    :root{
-      --overlayPlayButtonPosition: 50%;
-    }
-    ```
--   To undo this change, simply remove this code block or replace `50%` with `2.8em`.
-</details>
-
-<details>
-  <summary><i>5. Disable the card hover effect on desktop</i></summary>
-
-https://github.com/user-attachments/assets/ac22440d-39d7-48d6-a8da-3b7777372ffd
-
--   To disable the reflection on cards that shows when hovering over them on desktop, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
-
-```
-  :root{
-    --cardHoverEffect: none;
-  }
+```css
+@import url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/HolyFin-jellyfin-theme-build-latest-minified.css");
 ```
 
--   To undo this change, simply remove this code block or replace `none` with `""`.
-</details>
+4. Click **Save** and refresh your browser (CTRL + F5)
 
-<details>
-  <summary><i>6. Enable labels below library cards</i></summary>
+### Method 2: Client-Side
 
-  <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/5999a5de-5134-4b02-94aa-6306768a251c" />
+1. Open **Settings** → **Display**
+2. Find **Custom CSS** box
+3. Paste the same import code
+4. Save and refresh
 
--   To enable text labels under the media library cards, copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+---
 
-```
-  :root{
-    --libraryLabelVisibility: block;
-  }
-```
+## 🎨 Color Palette
 
--   To undo this change, simply remove this code block or replace `block` with `none`.
-</details>
+HolyFin uses a carefully curated indigo color scheme:
 
-<details>
-  <summary><i>7. Enable alternative style for the Media Bar plugin</i></summary>
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Primary Indigo | `#5E35B1` | Buttons, accents, primary brand |
+| Deep Purple | `#673AB7` | Hover states, highlights |
+| Indigo 600 | `#3949AB` | Active states, selections |
+| Purple Tint | `#7E57C2` | Secondary accents, borders |
 
-  <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/3e88e270-40f9-48ba-8173-f65b94344f8d" />
+---
 
--   HolyFin does not support any plugins by default, so to to add external support for [this plugin](https://github.com/IAmParadox27/jellyfin-plugin-media-bar), copy and paste the following code at the end in Custom CSS box, click save and finally refresh your app/webpage.
+## 🧩 Customization
 
-```
-	@import url("https://cdn.jsdelivr.net/gh/lscambo13/HolyFin@main/Theme/assets/add-ons/media-bar-plugin-support-latest-min.css");
-```
+### Custom "HolyFin" Logo Colors
 
--   To undo this change, simply remove this code block.
-</details>
+Override the logo gradient:
 
-<details>
-  <summary><i>8. Switch between different app bar styles</i></summary>
-
-https://github.com/user-attachments/assets/b5868cd2-8df9-490d-a2b6-4386c6ddcd56
-
--   You can switch between these using `--appBarHeight`.
--   Use 5em to enable the fading app bar (seamless) (default);
--   Or, use 4.6em to get the solid app bar (cleaner with border)
-
-```
-:root{
-  /* example */
-  --appBarHeight: 4.6em;
+```css
+.pageTitle img[src*="logo"]::after,
+.headerLogo img::after {
+    background: linear-gradient(135deg, #YOUR-COLOR-1, #YOUR-COLOR-2) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
 }
 ```
 
--   To undo this change, simply remove this code block.
-</details>
+### Enable Extra Card Buttons
+
+Show Mark Played / Favorites buttons on hover:
+
+```css
+:root {
+    --extraCardButtonsVisibility: block;
+}
+```
+
+### Center Play Button on Cards
+
+```css
+:root {
+    --overlayPlayButtonPosition: 50%;
+}
+```
+
+### Disable Card Hover Effect
+
+```css
+:root {
+    --cardHoverEffect: none;
+}
+```
+
+### Custom Accent Color
+
+Change the primary indigo color:
+
+```css
+:root {
+    --holyfin-purple-600: #YOUR-HEX-COLOR;
+    --activeColor: #YOUR-HEX-COLOR;
+    --uiAccentColor: #YOUR-HEX-COLOR;
+}
+```
+
+---
+
+## 📸 Screenshots
 
 <details>
-  <summary><i>9. Change to alternative color themes</i></summary>
+<summary>Click to view screenshots</summary>
 
-  <img width="640" height="auto" alt="image" src="https://github.com/user-attachments/assets/0cab75aa-8fcd-4174-b0db-cc533b724bca" />
-
--   Check out the [the theme Playground page](https://github.com/lscambo13/HolyFin/discussions/221) for different color themes.
--   You can also experiment and share your own take there if you wish.
-</details>
-
-<hr>
-
-### 🆗 Tested on
-
--   Jellyfin Server v10.11.5
--   Microsoft Edge (Chromium)
--   Jellyfin Android App v2.6.3
-
-<hr>
-
-### 🛠️ Troubleshooting
-
-<details>
-  <summary>1️⃣ - <i>How do I check if I am using the latest version of HolyFin?</i></summary>
-
--   Check the version number at the bottom in the Settings screen.
--   It should be something like `HolyFin v25.XX.XX`.
-
-    <img width="380" height="300" alt="image" src="https://github.com/user-attachments/assets/aecca6f5-7bd3-4057-9131-aa60b3becbaf" />
+> **Note:** Screenshots coming soon! HolyFin is freshly customized from ElegantFin.
+>
+> In the meantime, refer to [ElegantFin screenshots](https://github.com/lscambo13/ElegantFin#screenshots) - HolyFin looks similar but with deep indigo colors and "HolyFin" branding.
 
 </details>
 
-<details>
-  <summary>2️⃣ - <i>I see that a newer version is available, but I have not received it yet. Why?</i></summary>
+---
 
--   If the Settings footer shows an old version, it means that you are still using an old cache.
--   Once that cache is updated, the new version will be loaded automatically.
--   There are multiple ways to clear the cache depending on your OS, smartphone or TV. Look online if you don't know.
--   On the web version, you can force a hard refresh of the page using CTRL + F5.
--   On apps, try signing out and back in again. OR in case of Jellyfin Media Player on windows, you might need to delete the cache folder.
-</details>
+## ✅ Tested On
 
-<details>
-  <summary>3️⃣ - <i>Why do I notice visual bugs and inconsistencies on Jellyfin Media Player?</i></summary>
+- ✅ Jellyfin Server v10.11.X
+- ✅ Modern browsers (Chrome, Firefox, Edge, Safari)
+- ✅ Jellyfin Android App v2.6.X+
+- ✅ Jellyfin Web (all platforms)
+- ⚠️ TV compatibility inherited from ElegantFin
 
--   As of version 1.12.0, JMP is based on Qt 5.x which uses a very outdated web engine, so it does not support many new CSS features. Once a new version based on Qt 6.x is released, most issues should automatically be resolved. Until then, JMP is unsupported and I recommend using the web app instead.
-</details>
+---
 
-<details>
-  <summary>4️⃣ - <i>Does it work on the AndroidTV version of the Jellyfin app?</i></summary>
+## 🛠️ Troubleshooting
 
--   As of version 0.18.11, the official Jellyfin app on the AndroidTVs does not support css themes, but the Android mobile phone app supports them. The WebOS version of the app seems to be based on the mobile phone version, so it supports the theme just fine.
-</details>
+**Q: How do I check my HolyFin version?**
+A: Look at the footer in Settings - it should show `HolyFin v1.0.0`
 
-<details>
-  <summary>5️⃣ - <i>All the icons on my LG TV seem to be broken. How to fix them?</i></summary>
+**Q: I don't see the update?**
+A: Clear your browser cache (CTRL + F5) or sign out/in on apps
 
--   It seems that modern Material Icons which this theme uses are [not compatible on some WebOS TVs](https://github.com/lscambo13/HolyFin/issues/39). There is a [huge similar thread](https://www.reddit.com/r/youtubetv/comments/e27go3/chinese_symbols_instead_of_icons_on_lg_tv/) about this.
--   This bug can be fixed by using the older icons, so I have implemented the following workaround to bring back older, supported icons.
--   Simply add the following code at the end in Custom CSS box and save, then refresh your apps and webpages:
-    ```
-    :root{
-      --iconPack: 'Material Icons';
-    }
-    ```
-    </details>
+**Q: The logo still shows "Jellyfin"?**
+A: Make sure you hard-refreshed (CTRL + F5). The CSS replaces it client-side.
 
-<details>
-  <summary>6️⃣ - <i>How do I report bugs/issues?</i></summary>
+**Q: Icons broken on LG TV?**
+A: Add this to your Custom CSS:
+```css
+:root {
+    --iconPack: 'Material Icons';
+}
+```
 
--   First check [here](https://github.com/lscambo13/HolyFin/issues?q=) whether a similar issue has been reported already. If it exists, upvote and comment there to let me know.
--   Alternatively, create a new issue [here](https://github.com/lscambo13/HolyFin/issues/new/choose).
+**Q: Can I use both HolyFin AND ElegantFin styles?**
+A: No - they are separate themes. HolyFin is a customized fork with indigo colors.
 
-</details>
-<details>
-  <summary>7️⃣ - <i>When can I expect another update?</i></summary>
+---
 
--   🤷
-</details>
+## 📝 Credits
 
-<hr>
+### Original Theme
+**ElegantFin** by [lscambo13](https://github.com/lscambo13)
+HolyFin is based on the excellent work of the ElegantFin project. All core functionality and design patterns come from ElegantFin.
 
-### 📌 Contributing
+### HolyFin Customization
+- **Indigo color scheme** by **HolyG** ([@HeiligerG](https://github.com/HeiligerG))
+- **Text logo implementation** by HolyG
+- **Modern enhancements** (glassmorphism, animations) by HolyG
 
-Please read the [Contributor Guidelines](./CONTRIBUTING.md) before opening pull requests.
+### License
+[GPL-2.0 License](LICENSE) - Same as original ElegantFin
 
-This is a hobby project. If it helped you, your support really means a lot.
+---
 
-[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=☕&slug=lscambo13&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/lscambo13)
+## 🤝 Contributing
 
-<hr>
+Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting PRs.
 
-### 🙏 Feedback Appreciated
+**Quick contribution guidelines:**
+- Keep the indigo color scheme consistent
+- Test on desktop, mobile, and TV (if possible)
+- Follow the existing code style
+- Document any new customization options
 
-Please use the right template when creating an [issue](https://github.com/lscambo13/HolyFin/issues/new/choose) to [report bugs](https://github.com/lscambo13/HolyFin/issues/new?template=bug_report.md) or [provide suggestions](https://github.com/lscambo13/HolyFin/issues/new?template=feature_request.md).
+---
+
+## 💬 Feedback & Support
+
+- 🐛 [Report a Bug](https://github.com/HeiligerG/HolyFin/issues/new?template=bug_report.md)
+- 💡 [Request a Feature](https://github.com/HeiligerG/HolyFin/issues/new?template=feature_request.md)
+- 💬 [Discussions](https://github.com/HeiligerG/HolyFin/discussions)
+- ⭐ [Star this repo](https://github.com/HeiligerG/HolyFin/stargazers) if you like it!
+
+---
+
+## 📊 What's Different from ElegantFin?
+
+HolyFin is a customized fork with these key changes:
+
+| Feature | ElegantFin | HolyFin |
+|---------|------------|---------|
+| Primary Color | Blue/Purple | Deep Indigo (#5E35B1) |
+| Logo | Jellyfin logo | "HolyFin" text gradient |
+| Accents | Various | Consistent indigo palette |
+| Progress Bars | Standard | Indigo gradient with glow |
+| Scrollbars | Default | Custom indigo themed |
+| Cards | Standard | Glassmorphism + indigo borders |
+| Branding | ElegantFin | HolyFin |
+
+**If you prefer the original:** Use [ElegantFin](https://github.com/lscambo13/ElegantFin) instead!
+
+---
+
+## 🔮 Future Plans
+
+- [ ] Create custom screenshots showcasing indigo theme
+- [ ] Add more color variants (e.g., "HolyFin Deep Purple", "HolyFin Teal")
+- [ ] Improve TV compatibility testing
+- [ ] Community-contributed customization presets
+- [ ] Optional HolyFin logo image (SVG)
+
+---
+
+<div align="center">
+
+**Made with 💜 by HolyG**
+
+*Powered by [Jellyfin](https://jellyfin.org) • Inspired by [ElegantFin](https://github.com/lscambo13/ElegantFin)*
+
+**[⬆ Back to Top](#-holyfin---premium-indigo-jellyfin-theme)**
+
+</div>
