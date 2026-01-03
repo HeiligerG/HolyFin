@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.0.2 - Massive Logo (+30%) */
+/* Version: Deep Blue Clean v1.0.3 - Logo Left Aligned */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -4195,11 +4195,11 @@ h3.pageTitle:focus-visible {
     box-shadow: none !important;
     padding: 0 !important;
 
-    /* Set container size - MASSIVE LOGO */
+    /* Set container size - MASSIVE LOGO LEFT ALIGNED */
     display: inline-block !important;
     width: 351px !important;
     height: 96px !important;
-    margin: 0.5em 0 0.5em 1.2em !important;
+    margin: 0.5em 0 0.5em 0 !important;
     position: relative !important;
 }
 
@@ -4243,7 +4243,7 @@ h3.pageTitle:focus-visible {
     display: none !important;
 }
 
-/* Mobile logo adjustments - MASSIVE AND CENTERED */
+/* Mobile logo adjustments - MASSIVE AND LEFT ALIGNED */
 @media (max-width: 768px) {
     .skinHeader .headerLogo img[src*="logo"],
     .pageTitle.pageTitleWithLogo img[src*="logo"] {
@@ -4253,8 +4253,8 @@ h3.pageTitle:focus-visible {
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
         width: 260px !important;
         height: 72px !important;
-        margin: 0.5em auto !important;
-        display: block !important;
+        margin: 0.5em 0 0.5em 0 !important;
+        display: inline-block !important;
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
