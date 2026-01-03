@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue v26.01.03-FINAL */
+/* Version: Deep Blue Glassmorphism v26.01.03 */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -326,11 +326,15 @@ body {
 }
 
 .cardScalable {
-    border-radius: var(--largeRadius);
-    border: none !important;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
     overflow: hidden !important;
-    box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.4);
-    transition: transform 125ms;
+    background: rgba(30, 58, 138, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @supports (aspect-ratio: 1 / 1) {
@@ -369,7 +373,7 @@ body {
 }
 
 .cardImageContainer {
-    transition: transform 0.375s;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .card.squareCard[data-type="TvChannel"] .cardImageContainer.cardContent {
@@ -388,19 +392,28 @@ body {
     color: var(--borderColor);
 }
 
-.card-hoverable:hover .cardScalable,
+/* === MODERN GLASSMORPHISM HOVER EFFECTS === */
+.card-hoverable:hover .cardScalable {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(37, 99, 235, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    box-shadow:
+        0 20px 60px rgba(37, 99, 235, 0.4),
+        0 0 40px rgba(59, 130, 246, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
 .card-hoverable:hover .visualCardBox {
-    border-color: transparent !important;
-    border: none !important;
+    background: rgba(37, 99, 235, 0.08);
 }
 
 .card-hoverable:hover .visualCardBox .cardScalable {
-    border-color: transparent !important;
-    border: none !important;
+    border: 1px solid rgba(59, 130, 246, 0.2) !important;
 }
 
 .card-hoverable:hover .cardImageContainer {
-    /* Removed transform scale to eliminate square shadow effect */
+    transform: scale(1.05);
+    filter: brightness(1.1) contrast(1.05);
 }
 
 .card-hoverable .itemSelectionPanel {
@@ -4086,9 +4099,14 @@ for extended styling, use the add-on */
 .skinHeader .headerLogo img[src*="logo"],
 .skinHeader .skinHeader-logo img[src*="logo"],
 .pageTitle.pageTitleWithLogo img[src*="logo"],
-.adminDrawerLogo img[src*="logo"] {
+.adminDrawerLogo img[src*="logo"],
+.headerLogo,
+.skinHeader-logo {
     display: none !important;
     visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 /* Logo replacement - ENABLED */
