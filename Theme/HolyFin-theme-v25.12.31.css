@@ -421,7 +421,7 @@ body {
 
 .cardOverlayContainer {
     transition: 0.5s;
-    background: rgba(255, 255, 255, 0.05);
+    background: transparent;
 }
 
 .cardOverlayContainer:after {
@@ -4080,7 +4080,7 @@ for extended styling, use the add-on */
 /* Replace Jellyfin logo with HolyFin SVG logo from CDN */
 /* VERY SPECIFIC SELECTORS - DO NOT MAKE THESE MORE GENERIC OR MEDIA IMAGES WILL BREAK */
 
-/* Method 1: For img tags - replace with SVG */
+/* Method 1: For img tags - replace with SVG using content property */
 .skinHeader .headerLogo img[src*="logo"],
 .skinHeader .skinHeader-logo img[src*="logo"],
 .pageTitle.pageTitleWithLogo img[src*="logo"],
@@ -4091,14 +4091,25 @@ for extended styling, use the add-on */
     filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
 }
 
-/* Method 2: For empty h3 tags - use background-image */
-.pageTitle.pageTitleWithLogo:not(:has(img)) {
+/* Method 2: For empty h3 tags on homepage - use ::before pseudo-element */
+.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
+    position: relative;
+    min-width: 150px;
+    min-height: 40px;
+}
+
+.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 40px;
     background-image: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg");
     background-repeat: no-repeat;
     background-position: left center;
     background-size: contain;
-    height: 40px;
-    width: 150px;
     filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
 }
 
@@ -4109,9 +4120,14 @@ for extended styling, use the add-on */
         height: 32px;
     }
 
-    .pageTitle.pageTitleWithLogo:not(:has(img)) {
-        height: 32px;
+    .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
+        min-width: 120px;
+        min-height: 32px;
+    }
+
+    .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
         width: 120px;
+        height: 32px;
     }
 }
 
@@ -4121,9 +4137,14 @@ for extended styling, use the add-on */
         height: 48px;
     }
 
-    .pageTitle.pageTitleWithLogo:not(:has(img)) {
-        height: 48px;
+    .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
+        min-width: 180px;
+        min-height: 48px;
+    }
+
+    .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
         width: 180px;
+        height: 48px;
     }
 }
 
