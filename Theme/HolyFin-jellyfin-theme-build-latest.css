@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.0.8 - Medium Logo (50% smaller) */
+/* Version: Deep Blue Clean v1.0.9 - Empty Library Placeholder */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -4285,6 +4285,34 @@ h3.pageTitle:focus-visible {
         width: 163px !important;
         height: 44px !important;
     }
+}
+
+/* === EMPTY LIBRARY PLACEHOLDER === */
+/* Show placeholder icon and message when library is empty */
+.itemsContainer:empty::before,
+.verticalSection:has(.itemsContainer:empty) .itemsContainer::before {
+    content: "\e02c";
+    font-family: "Material Icons Round";
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+}
+
+.itemsContainer:empty::after,
+.verticalSection:has(.itemsContainer:empty) .itemsContainer::after {
+    content: "Keine Medien gefunden";
+    position: absolute;
+    top: calc(50vh + 2em);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 300;
 }
 
 /* === ENHANCED INDIGO ANIMATIONS === */
