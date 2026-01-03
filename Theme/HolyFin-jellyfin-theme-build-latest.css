@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v0.9.7 - Logo 180x48 Fix */
+/* Version: Deep Blue Clean v0.9.9 - Logo Background-Image Method */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -4180,24 +4180,46 @@ h3.pageTitle:focus-visible {
     box-shadow: none !important;
 }
 
-/* Logo replacement - ENABLED with proper 180x48 dimensions - NO BORDERS */
+/* Logo replacement - NEW METHOD using background-image - NO BORDERS */
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-    background: none !important;
-    background-image: none !important;
-    content: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg") !important;
-    display: inline-block !important;
-    width: 180px !important;
-    height: 48px !important;
-    filter: brightness(1.1);
+    /* Hide the element text completely */
+    font-size: 0 !important;
+    color: transparent !important;
     text-indent: -9999px !important;
     overflow: hidden !important;
-    margin: 0.8em 0 0.8em 1.2em !important;
-    padding: 0 !important;
+
+    /* Remove all borders and styling from container */
+    background: transparent !important;
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
-    object-fit: contain;
-    vertical-align: middle;
+    padding: 0 !important;
+
+    /* Set container size */
+    display: inline-block !important;
+    width: 180px !important;
+    height: 48px !important;
+    margin: 0.8em 0 0.8em 1.2em !important;
+    position: relative !important;
+}
+
+/* Use ::before pseudo-element for the actual logo image */
+.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
+    content: "" !important;
+    display: block !important;
+    width: 180px !important;
+    height: 48px !important;
+    background-image: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    filter: brightness(1.1);
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 /* Remove borders from logo focus state */
@@ -4208,12 +4230,17 @@ h3.pageTitle:focus-visible {
     box-shadow: none !important;
 }
 
-/* Remove any pseudo-element borders */
-.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before,
-.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::after {
+/* Ensure ::before stays clean on focus */
+.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo:focus::before,
+.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo:focus-visible::before {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
+}
+
+/* Remove any ::after borders */
+.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::after {
+    display: none !important;
 }
 
 /* Mobile logo adjustments */
@@ -4227,6 +4254,11 @@ h3.pageTitle:focus-visible {
         width: 130px !important;
         height: 36px !important;
         margin: 0.6em 0 0.6em 1em !important;
+    }
+
+    .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
+        width: 130px !important;
+        height: 36px !important;
     }
 }
 
