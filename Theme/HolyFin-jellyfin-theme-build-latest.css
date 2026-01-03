@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v0.9.3 */
+/* Version: Deep Blue Clean v0.9.4 */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -270,10 +270,16 @@ body {
 
 .cardImageIcon {
     color: var(--borderColor);
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .cardPadder .cardImageIcon {
     color: var(--selectorBackgroundColorAlpha);
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .card:focus .cardBox.visualCardBox,
@@ -383,11 +389,24 @@ body {
     padding-top: 1.5em;
     color: transparent;
     white-space: pre;
+    display: block !important;
+    visibility: visible !important;
 }
 
 .cardImageContainer > .cardDefaultText::before {
     content: "?\A";
     color: var(--borderColor);
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Ensure material icons are visible on cards */
+.cardImageContainer .material-icons,
+.cardContent .material-icons,
+.cardPadder .material-icons {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* === CLEAN HOVER EFFECTS - NO BLUE SHADOWS === */
@@ -4135,19 +4154,20 @@ for extended styling, use the add-on */
     height: 0 !important;
 }
 
-/* Logo replacement - ENABLED with corner positioning */
+/* Logo replacement - ENABLED with improved styling */
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
     background: none !important;
     background-image: none !important;
     content: url("https://cdn.jsdelivr.net/gh/HeiligerG/HolyFin@main/Theme/assets/img/holyfin-logo.svg") !important;
-    display: inline-block !important;
-    width: 200px !important;
-    height: 60px !important;
-    filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
+    display: block !important;
+    width: 180px !important;
+    height: 50px !important;
+    filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.2));
     text-indent: -9999px !important;
     overflow: hidden !important;
-    margin: 0.5em 1em !important;
+    margin: 1em !important;
     object-fit: contain;
+    position: relative;
 }
 
 /* Mobile logo adjustments */
@@ -4158,13 +4178,9 @@ for extended styling, use the add-on */
     }
 
     .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
-        min-width: 120px;
-        min-height: 32px;
-    }
-
-    .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo::before {
-        width: 120px;
-        height: 32px;
+        width: 140px !important;
+        height: 40px !important;
+        margin: 0.75em !important;
     }
 }
 
