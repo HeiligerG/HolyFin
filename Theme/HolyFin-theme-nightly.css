@@ -4079,19 +4079,20 @@ for extended styling, use the add-on */
 
 /* === HOLYFIN TEXT LOGO === */
 /* Replace Jellyfin logo with "HolyFin" text with indigo gradient */
-.pageTitle img[src*="logo"],
-.headerLogo img,
-.skinHeader-logo img,
-.adminDrawerLogo img {
+/* VERY SPECIFIC SELECTORS - DO NOT MAKE THESE MORE GENERIC OR MEDIA IMAGES WILL BREAK */
+.skinHeader .headerLogo img[src*="logo"],
+.skinHeader .skinHeader-logo img[src*="logo"],
+.pageTitle.pageTitleWithLogo img[src*="logo"],
+.adminDrawerLogo img[src*="logo"] {
     visibility: hidden;
     position: relative;
     height: 40px;
 }
 
-.pageTitle img[src*="logo"]::after,
-.headerLogo img::after,
-.skinHeader-logo img::after,
-.adminDrawerLogo img::after {
+.skinHeader .headerLogo img[src*="logo"]::after,
+.skinHeader .skinHeader-logo img[src*="logo"]::after,
+.pageTitle.pageTitleWithLogo img[src*="logo"]::after,
+.adminDrawerLogo img[src*="logo"]::after {
     visibility: visible;
     position: absolute;
     left: 0;
@@ -4111,15 +4112,15 @@ for extended styling, use the add-on */
 
 /* Mobile logo adjustments */
 @media (max-width: 768px) {
-    .pageTitle img[src*="logo"]::after,
-    .headerLogo img::after {
+    .skinHeader .headerLogo img[src*="logo"]::after,
+    .pageTitle.pageTitleWithLogo img[src*="logo"]::after {
         font-size: 1.5rem;
     }
 }
 
 /* TV logo adjustments */
 @media (max-width: 1280px) and (min-width: 769px) {
-    .pageTitle img[src*="logo"]::after {
+    .pageTitle.pageTitleWithLogo img[src*="logo"]::after {
         font-size: 2.2rem;
     }
 }
