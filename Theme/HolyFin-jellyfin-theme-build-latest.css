@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue v26.01.03-fix3 */
+/* Version: Deep Blue v26.01.03-final */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -4092,12 +4092,7 @@ for extended styling, use the add-on */
     filter: drop-shadow(0 2px 8px rgba(37, 99, 235, 0.3));
 }
 
-/* Logo replacement - DISABLED: Logo file does not exist in repository */
-/* To enable custom logo:
-   1. Add your logo SVG file to Theme/assets/img/holyfin-logo.svg
-   2. Uncomment the code below
-   3. Regenerate and push to GitHub
-
+/* Logo replacement - ENABLED */
 .pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
     background: none !important;
     background-image: none !important;
@@ -4109,7 +4104,6 @@ for extended styling, use the add-on */
     text-indent: -9999px !important;
     overflow: hidden !important;
 }
-*/
 
 /* Mobile logo adjustments */
 @media (max-width: 768px) {
