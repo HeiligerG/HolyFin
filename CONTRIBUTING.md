@@ -1,6 +1,6 @@
-# Contributing to ElegantFin
+# Contributing to HolyFin
 
-Thank you for your interest in contributing to **ElegantFin**, a custom theme for the Jellyfin Web UI. To keep the project clean, maintainable, and compatible across devices, please follow these guidelines when contributing.
+Thank you for your interest in contributing to **HolyFin**, a custom theme for the Jellyfin Web UI. To keep the project clean, maintainable, and compatible across devices, please follow these guidelines when contributing.
 
 ---
 
@@ -14,7 +14,7 @@ Thank you for your interest in contributing to **ElegantFin**, a custom theme fo
 
 - **Comment your code.** If you’re adding new CSS rules or modifying complex ones, include inline comments where needed to describe intent.
 
-- **Don't forget responsiveness.** ElegantFin runs on phones, tablets, TVs, and desktops. Ensure your changes are tested across viewports and don't break layouts or interactions on other platforms.
+- **Don't forget responsiveness.** HolyFin runs on phones, tablets, TVs, and desktops. Ensure your changes are tested across viewports and don't break layouts or interactions on other platforms.
 
 - **Use consistent units.** Follow the theme’s existing use of relative units such as `em` instead of absolute units like `px`.
 
@@ -49,4 +49,4 @@ Please open a GitHub issue first to discuss the proposal with maintainers before
 
 ---
 
-We appreciate your help in making ElegantFin better for everyone. Thanks for contributing! 🙌
+We appreciate your help in making HolyFin better for everyone. Thanks for contributing! 🙌

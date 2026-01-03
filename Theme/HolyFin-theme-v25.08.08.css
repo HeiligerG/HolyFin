@@ -1,14 +1,14 @@
-/* ElegantFin Theme for Jellyfin by lscambo13 */
+/* HolyFin Theme for Jellyfin by lscambo13 */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/extras-media-bar-nightly.css); */
-/* @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
+/* @import url("https://cdn.jsdelivr.net/gh/lscambo13/HolyFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
 
 /* Inter Font Family */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --elegantFinFooterText: "ElegantFin v25.08.02";
+    --elegantFinFooterText: "HolyFin v25.08.08";
 
     /* Base theme colors */
     color-scheme: dark;
@@ -66,6 +66,7 @@
     --hoverGradientH: linear-gradient(90deg, transparent, rgb(255 255 255 / 100%) 45%, rgb(255 255 255 / 100%) 55%, transparent);
 
     --itemBackdropMask: linear-gradient(180deg, rgba(0, 0, 0, .8), 75%, transparent);
+    /* --themeVideoPlayerMask: linear-gradient(180deg, rgba(0, 0, 0, 1), 85%, transparent); */
 
     /* standard component sizes */
     --largerRadius: 1.25em;
@@ -477,120 +478,169 @@ html {
     --cardCount: 2;
 }
 
-/* if the window width is equal to or more than (at minimum) 220em then the code in the query will trigger */
-/* 25 posters, 22 thumbs */
-@media (min-width: 220em) {
+/* if the window width is equal to or more than (at minimum) 300em then the code in the query will trigger */
+/* 16 posters, 12 thumbs */
+@media (min-width: 300em) {
 
     .portraitCard,
     .squareCard {
-        --cardCount: 25;
+        --cardCount: 16;
     }
 
     .overflowPortraitCard,
     .overflowSquareCard {
-        --cardCount: 24;
+        --cardCount: 15;
     }
 
     .squareCard:has(.cardFooter) {
-        --cardCount: 22;
+        --cardCount: 12;
     }
 
     .backdropCard {
-        --cardCount: 22;
+        --cardCount: 12;
     }
 
     .overflowBackdropCard {
-        --cardCount: 21;
+        --cardCount: 11;
     }
 }
 
-/* if the window width is equal to or less than (at maximum) 220em then the code in the query will trigger */
-/* 21 posters, 18 thumbs */
+/* if the window width is equal to or less than (at maximum) 300em then the code in the query will trigger */
+/* 15 posters, 11 thumbs */
+@media (max-width: 300em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 15;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 14;
+    }
+
+    .squareCard:has(.cardFooter) {
+        --cardCount: 11;
+    }
+
+    .backdropCard {
+        --cardCount: 11;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 10;
+    }
+}
+
+/* 14 posters, 10 thumbs */
+@media (max-width: 270em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 14;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 13;
+    }
+
+    .squareCard:has(.cardFooter) {
+        --cardCount: 10;
+    }
+
+    .backdropCard {
+        --cardCount: 10;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 9;
+    }
+}
+
+/* 13 posters, 10 thumbs */
+@media (max-width: 240em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 13;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 12;
+    }
+
+    .squareCard:has(.cardFooter) {
+        --cardCount: 10;
+    }
+
+    .backdropCard {
+        --cardCount: 10;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 9;
+    }
+}
+
+/* 12 posters, 9 thumbs, 4K*/
 @media (max-width: 220em) {
 
     .portraitCard,
     .squareCard {
-        --cardCount: 21;
+        --cardCount: 12;
     }
 
     .overflowPortraitCard,
     .overflowSquareCard {
-        --cardCount: 20;
+        --cardCount: 11;
     }
 
     .squareCard:has(.cardFooter) {
-        --cardCount: 18;
+        --cardCount: 9;
     }
 
     .backdropCard {
-        --cardCount: 18;
+        --cardCount: 9;
     }
 
     .overflowBackdropCard {
-        --cardCount: 17;
+        --cardCount: 8;
     }
 }
 
-/* if the window width is equal to or less than (at maximum) 200em then the code in the query will trigger */
-/* 17 posters, 14 thumbs */
+/* 11 posters, 9 thumbs */
 @media (max-width: 200em) {
 
     .portraitCard,
     .squareCard {
-        --cardCount: 17;
+        --cardCount: 11;
     }
 
     .overflowPortraitCard,
     .overflowSquareCard {
-        --cardCount: 16;
+        --cardCount: 10;
     }
 
     .squareCard:has(.cardFooter) {
-        --cardCount: 14;
+        --cardCount: 9;
     }
 
     .backdropCard {
-        --cardCount: 14;
+        --cardCount: 9;
     }
 
     .overflowBackdropCard {
-        --cardCount: 13;
+        --cardCount: 8;
     }
 }
 
-/* if the window width is equal to or less than (at maximum) 170em then the code in the query will trigger */
-/* 14 posters, 10 thumbs */
+/* 10 posters, 8 thumbs */
 @media (max-width: 170em) {
 
     .portraitCard,
     .squareCard {
-        --cardCount: 14;
-    }
-
-    .overflowPortraitCard,
-    .overflowSquareCard {
-        --cardCount: 13;
-    }
-
-    .squareCard:has(.cardFooter) {
-        --cardCount: 10;
-    }
-
-    .backdropCard {
-        --cardCount: 10;
-    }
-
-    .overflowBackdropCard {
-        --cardCount: 9;
-    }
-}
-
-/* if the window width is equal to or less than (at maximum) 150em then the code in the query will trigger */
-/* 10 posters, 7 thumbs */
-@media (max-width: 150em) {
-
-    .portraitCard,
-    .squareCard {
         --cardCount: 10;
     }
 
@@ -600,7 +650,7 @@ html {
     }
 
     .squareCard:has(.cardFooter) {
-        --cardCount: 8;
+        --cardCount: 9;
     }
 
     .backdropCard {
@@ -612,7 +662,33 @@ html {
     }
 }
 
-/* 8 posters, 7 thumbs */
+/* 9 posters, 7 thumbs */
+@media (max-width: 140em) {
+
+    .portraitCard,
+    .squareCard {
+        --cardCount: 9;
+    }
+
+    .overflowPortraitCard,
+    .overflowSquareCard {
+        --cardCount: 8;
+    }
+
+    .squareCard:has(.cardFooter) {
+        --cardCount: 7;
+    }
+
+    .backdropCard {
+        --cardCount: 7;
+    }
+
+    .overflowBackdropCard {
+        --cardCount: 6;
+    }
+}
+
+/* 8 posters, 7 thumbs, 1080p */
 @media (max-width: 120em) {
 
     .portraitCard,
@@ -644,9 +720,7 @@ html {
     .portraitCard,
     .squareCard,
     .overflowPortraitCard,
-    .overflowSquareCard,
-    .squareCard:has(.cardFooter),
-    .backdropCard {
+    .overflowSquareCard {
         --cardCount: 7;
     }
 
@@ -679,7 +753,7 @@ html {
 
     .overflowBackdropCard,
     .backdropCard {
-        --cardCount: 5;
+        --cardCount: 4;
     }
 }
 
@@ -1010,6 +1084,24 @@ html {
     display: block !important;
 }
 
+/* Theme video styling rolled back because jellyfin does not differentiate between the main video player and theme video playback nicely*/
+/* .videoPlayerContainer {
+    position: relative !important;
+    -webkit-mask: var(--themeVideoPlayerMask);
+    mask: var(--themeVideoPlayerMask);
+    height: 90vh;
+}
+
+.layout-mobile .videoPlayerContainer {
+    z-index: 1;
+    height: 35vh;
+}
+
+.videoPlayerContainer>.htmlvideoplayer {
+    width: -webkit-fill-available;
+    object-fit: cover;
+} */
+
 .layout-desktop .itemBackdrop {
     height: calc(100vh - 32vh - var(--primaryItemPageNegativeSpace)) !important;
 }
@@ -1020,7 +1112,7 @@ html {
     top: -30%;
     -webkit-mask: var(--itemBackdropMask);
     mask: var(--itemBackdropMask);
-    animation: animMoveDown 1s ease-out forwards;
+    animation: animMoveDown .5s ease-out forwards;
     height: 45vh;
 }
 
@@ -1168,7 +1260,7 @@ html {
 
 .layout-mobile #itemDetailPage:has(.detailImageContainer .card.backdropCard) .itemBackdrop,
 .layout-mobile #itemDetailPage:has(.detailImageContainer .card .cardImageIcon.album) .itemBackdrop {
-    animation: animMoveDownSecondaryPage 1s ease-out forwards;
+    animation: animMoveDownSecondaryPage .5s ease-out forwards;
 }
 
 .layout-mobile .cardImageIcon {
@@ -1293,21 +1385,19 @@ html,
 
 @keyframes animScaleUp {
     from {
-        transform: scale(1) translateY(-2.5%);
+        transform: translateY(-2.5%);
         opacity: 0;
-        filter: var(--blurLarge);
     }
 
     to {
-        transform: scale(1) translateY(0%);
+        transform: translateY(0%);
         opacity: 1;
-        filter: blur(0);
     }
 }
 
 .backdropImageFadeIn {
     transform-origin: bottom center;
-    animation: animScaleUp 1s ease-out forwards;
+    animation: animScaleUp .5s ease-out forwards;
 }
 
 .appfooter {
@@ -2116,7 +2206,7 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
     border-radius: 3em;
     border-color: var(--borderColor);
     height: 3em;
-    width: 10em;
+    min-width: 10em;
     margin-right: .5em !important;
 }
 
@@ -2567,7 +2657,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 .layout-mobile .padded-right-withalphapicker {
-    padding-left: 3.5%;
+    padding-left: 4.5%;
     padding-right: 6.5%;
 }
 
@@ -2681,7 +2771,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 .upNextDialog-title {
-    white-space: wrap;
+    white-space: pre-wrap;
     width: unset;
 }
 
@@ -2697,6 +2787,16 @@ div[data-role=controlgroup] a.ui-btn-active {
 .skip-button {
     background-color: whitesmoke;
     box-shadow: var(--shadow);
+    bottom: 25%;
+    right: var(--sidePadding);
+}
+
+/* this workaround allows the skip button get focused correctly on TVs using remote navigation*/
+/* issue: back button can no longer be focused correctly when this button is focused, 
+but that is a non-issue because users can use the back button on their remotes */
+.layout-tv .skip-button {
+    right: unset;
+    left: var(--sidePadding);
 }
 
 .skip-button:hover {
@@ -2794,7 +2894,7 @@ div[data-role=controlgroup] a.ui-btn-active {
 }
 
 .emby-textarea {
-    font-family: consolas;
+    font-family: consolas, monaco, monospace;
 }
 
 .emby-select-withcolor,
@@ -3347,7 +3447,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     backdrop-filter: none;
     background-color: transparent;
     border: none;
-    border-width: 0 0 var(--borderWidth) 0;
     background: var(--headerBackground);
     padding-top: .75em;
 }
@@ -3373,6 +3472,11 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     z-index: -1;
 }
 
+.headerTabs.sectionTabs {
+    margin: 0;
+    height: 6em;
+}
+
 /* this is the transparent header, visible in main media page */
 .skinHeader-withBackground.semiTransparent {
     --headerBackground: none;
@@ -3380,16 +3484,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     background-color: transparent;
     border: none;
 }
-
-/* this is the semi transparent header without, visible when backdrops setting is on */
-/* .backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader):not(.semiTransparent),
-.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.semiTransparent)::after,
-.backgroundContainer.withBackdrop~div .skinHeader-blurred:not(.osdHeader)::after {
-    --headerBackground: var(--headerColorGradientAlt);
-    backdrop-filter: none;
-    background-color: transparent;
-    border: none;
-} */
 
 .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty)::after,
 .skinHeader.headroom:not(.osdHeader, .noHomeButtonHeader):has(.pageTitle:empty) {
@@ -3431,11 +3525,6 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
     font-variation-settings: 'FILL' 0;
 }
 
-.headerTabs.sectionTabs {
-    margin: 0;
-    height: 6em;
-}
-
 .layout-tv .sectionTabs .emby-tabs.smoothScrollX {
     overflow: visible !important;
 }
@@ -3472,7 +3561,9 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 }
 
 @media (min-width: 75em) {
-    .sectionTabs:not(.layout-tv .sectionTabs) {
+
+    .layout-desktop .sectionTabs,
+    .layout-mobile .sectionTabs {
         -webkit-align-items: center;
         align-items: center;
         -webkit-align-self: center;
@@ -3507,3 +3598,22 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 .remoteControlContent {
     padding: 0 var(--sidePadding) !important;
 }
+
+/* Uncomment this to bring back the original HolyFin header design - start */
+
+/* .skinHeader-blurred:not(.osdHeader):not(.semiTransparent) {
+    backdrop-filter: var(--blurLarge);
+    background: var(--headerColor);
+    border: var(--defaultBorder);
+    border-width: 0 0 var(--borderWidth) 0;
+}
+
+.skinHeader-blurred:not(.osdHeader):not(.semiTransparent)::after {
+    content: none;
+}
+
+.headerTabs.sectionTabs {
+    height: 4em;
+} */
+
+/* Uncomment this to bring back the original HolyFin header design - end */

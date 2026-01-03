@@ -1,13 +1,13 @@
-/* ElegantFin Theme for Jellyfin by lscambo13 */
+/* HolyFin Theme for Jellyfin by lscambo13 */
 
 /* Add-ons: Uncomment to enable */
-/* @import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
+/* @import url("https://cdn.jsdelivr.net/gh/lscambo13/HolyFin@main/Theme/assets/add-ons/custom-media-covers-latest-min.css"); */
 
 /* Inter Font Family */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --elegantFinFooterText: "ElegantFin v25.03.18";
+    --elegantFinFooterText: "HolyFin v25.05.03";
     color-scheme: dark;
     --darkerGradientPoint: #111827;
     --darkerGradientPointAlpha: rgba(17, 24, 39, 0.85);
@@ -47,6 +47,7 @@
     --defaultLighterBorder: var(--borderWidth) solid var(--lighterBorderColor);
 
     /* login page customizations */
+    /* --loginPageBgUrl: url("<YOUR-JELLYFIN-SERVER-ADDRESS>/Branding/Splashscreen?format=webp&foregroundLayer=1&quality=33&width=3840&height=2160&blur=2"); */
     --loginPageBgUrl: url("");
     --loginPageText: "Sign in to continue";
 
@@ -218,7 +219,9 @@ html {
 
 .cardOverlayContainer {
     transition: .25s;
-    background: var(--hoverGradientA);
+    background: rgba(255, 255, 255, 0.1);
+    /* Uncomment the code below to get back the old overlay on hovering over cards*/
+    /* background: var(--hoverGradientA); */
     background-size: 200%;
     background-position-x: 100%;
 }
@@ -260,7 +263,7 @@ html {
 }
 
 .layout-mobile .cardOverlayButton {
-    padding: .425em;
+    padding: .75em;
 }
 
 .layout-mobile .portraitCard .cardOverlayButton-br,
@@ -437,13 +440,16 @@ html {
     background-color: transparent;
 }
 
+/* hides home button from the appbar/header on all layouts */
 .headerHomeButton {
     display: none;
 }
 
-/* hide sync button on home screen */
-.skinHeader.noHomeButtonHeader .headerSyncButton {
-    display: none;
+/* hides sync button on home screen on phones only in portrait mode */
+@media (orientation: portrait) {
+    .layout-mobile .skinHeader.noHomeButtonHeader .headerSyncButton {
+        display: none;
+    }
 }
 
 .pageTitle {
@@ -527,6 +533,10 @@ html {
     width: 23vw !important;
 }
 
+.layout-tv .detailImageContainer .card {
+    width: 23vw !important;
+}
+
 @media (max-width: 62.5em) {
     .layout-desktop .itemBackdrop {
         height: 7em !important;
@@ -539,11 +549,12 @@ html {
 
 @media (max-width: 50em) {
     .homeLibraryButton {
-        width: 45% !important;
+        width: 45.6% !important;
     }
 }
 
 .homeLibraryButton {
+    padding-inline-start: .25em;
     min-width: 15%;
 }
 
@@ -694,17 +705,30 @@ html {
     color: var(--uiAccentColor) !important;
 }
 
+#divRunningTasks progress {
+    width: calc(100% - 7em);
+}
+
 .itemProgressBar:not(.backgroundProgress, .playbackProgress, .transcodingProgress) {
     backdrop-filter: var(--blurLarge);
-    background-color: rgb(123 123 123 / 30%) !important;
-    box-shadow: inset 0px 0px 0.01em .01em #969696;
+    background-color: rgba(169, 169, 169, 0.3) !important;
+    height: 0.35em;
     overflow: hidden;
     border-radius: var(--largeRadius);
 }
 
+.layout-mobile .itemProgressBar:not(.backgroundProgress, .playbackProgress, .transcodingProgress) {
+    width: calc(100% - 2.5em);
+}
+
+.layout-mobile .backdropCard .itemProgressBar:not(.backgroundProgress, .playbackProgress, .transcodingProgress) {
+    width: 100%;
+    width: -webkit-fill-available;
+}
+
 .itemProgressBarForeground {
     border-radius: var(--largeRadius);
-    background-color: var(--uiAccentColor);
+    background-color: var(--dimTextColor);
 }
 
 .backgroundProgress>div {
@@ -752,6 +776,10 @@ progress+span {
 
 .mdl-slider-background-flex-container {
     padding: 0;
+}
+
+.sliderContainer:active .mdl-slider-background-flex {
+    transform: scaleY(1.75);
 }
 
 .mdl-slider-background-flex {
@@ -1010,11 +1038,12 @@ progress+span {
 
 .innerCardFooter,
 .chapterThumbTextContainer {
-    background: transparent;
+    background: linear-gradient(0deg, #000000e8, transparent);
     font-weight: 500;
     text-shadow: .1em .1em 0px black;
-    padding: 1em;
+    padding: 5em 2em 1.5em 2em;
     width: auto;
+    width: -webkit-fill-available;
 }
 
 .centerMessage {
@@ -1365,9 +1394,15 @@ div[data-role=controlgroup] a.ui-btn-active {
     padding: 1em;
 }
 
+.serverInfo>:nth-child(1n) {
+    -webkit-flex: 1 0 30%;
+    flex: 1 0 30%;
+}
+
 .serverInfo>:nth-child(2n) {
-    -webkit-flex: 1 0 60%;
-    flex: 1 0 60%;
+    -webkit-flex: 1 0 50%;
+    flex: 1 0 50%;
+    text-align: end;
 }
 
 .listItemIcon:not(.listItemIcon-transparent) {
@@ -1642,11 +1677,11 @@ div[data-role=controlgroup] a.ui-btn-active {
     background-color: var(--highlightOutlineColor);
 }
 
-[dir=ltr] .padded-left.vertical-wrap {
+[dir=ltr] .padded-left.vertical-wrap:not(div:has(.homeLibraryButton)) {
     padding-left: 5% !important;
 }
 
-[dir=ltr] .padded-right.vertical-wrap {
+[dir=ltr] .padded-right.vertical-wrap:not(div:has(.homeLibraryButton)) {
     padding-right: 5% !important;
 }
 
@@ -1781,7 +1816,6 @@ div[data-role=controlgroup] a.ui-btn-active {
 
 .activeSession {
     width: 98% !important;
-    max-width: 27rem !important;
 }
 
 .emby-tab-button:hover {
@@ -1957,6 +1991,19 @@ div[data-role=controlgroup] a.ui-btn-active {
     background-color: var(--lighterGradientPointAlpha);
 }
 
+.channelPrograms>.programCell:nth-child(odd) {
+    background-color: var(--darkerGradientPoint);
+}
+
+.channelPrograms>.programCell:nth-child(even) {
+    /* background-color: #11182700; */
+}
+
+.guide-channelHeaderCell:focus,
+.programCell:focus {
+    background-color: var(--highlightOutlineColor) !important;
+}
+
 .emby-select-iconbutton {
     background-color: var(--selectorBackgroundColor);
     border: var(--defaultLighterBorder);
@@ -2080,70 +2127,44 @@ ul.MuiList-root.MuiMenu-list.MuiList-dense>div:first-child {
 }
 
 #loginPage {
-    padding-top: 20em !important;
-}
-
-@media (max-height: 890px) {
-    #loginPage {
-        padding-top: 6.5em !important;
-    }
-}
-
-@media (max-height: 1300px) {
-    #loginPage:has(.padded-left.padded-right.padded-bottom-page .visualLoginForm:not(.hide)) {
-        padding-top: 6.5em !important;
-    }
-}
-
-#loginPage .readOnlyContent {
-    margin: .5em auto 0em !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1em;
+    overflow-y: auto;
+    background: linear-gradient(to bottom, var(--darkerGradientPointAlpha), var(--lighterGradientPoint)), var(--loginPageBgUrl);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
 #loginPage .padded-left.padded-right.padded-bottom-page {
-    margin: 2em auto 0;
     width: 28em;
     background: rgba(30, 40, 54, 0.7);
     padding: 2em 2em 1em 2em !important;
     border-radius: var(--largerRadius);
     backdrop-filter: var(--blurDefault);
     box-sizing: border-box;
-}
-
-#loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
-    width: 80em;
-}
-
-@media (max-width: 640px) {
-    #loginPage .padded-left.padded-right.padded-bottom-page {
-        width: 100%;
-        margin: 2em;
-    }
-}
-
-@media (max-width: 1300px) {
-    #loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
-        width: 100%;
-        margin: 2em;
-    }
-}
-
-#loginPage {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 2em 0;
-    overflow-y: auto;
-    background:
-        var(--loginPageBgUrl, linear-gradient(to bottom, var(--darkerGradientPointAlpha), var(--lighterGradientPoint)));
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    transform: translateY(3em);
 }
 
 .manualLoginForm .sectionTitle,
 .visualLoginForm>h1 {
     display: none;
+}
+
+#loginPage .padded-left.padded-right.padded-bottom-page:has(.visualLoginForm:not(.hide)) {
+    width: 40em;
+}
+
+#divUsers .squareCard {
+    width: 30% !important;
+}
+
+.layout-mobile #divUsers .squareCard {
+    width: 45% !important;
 }
 
 .manualLoginForm::before,
