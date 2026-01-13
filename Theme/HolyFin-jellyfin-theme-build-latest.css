@@ -519,7 +519,6 @@ body {
 
 .emby-scroller .itemsContainer:has(.card.card-hoverable:hover) .card.card-hoverable .cardScalable {
   transform: scale(0.985);
-  filter: brightness(0.88) saturate(0.96);
 }
 
 /* hovered card wins */
@@ -540,43 +539,7 @@ body {
 
 
 /* ================================
-   4) Idle Floating (subtle, varied timing)
-   Works on desktop; can be disabled on touch if you want
-   ================================ */
-
-@keyframes holyfin-float {
-  0%   { transform: translateY(0px); }
-  100% { transform: translateY(-3px); } /* 2–4px sweet spot */
-}
-
-/* Apply to scalable element so we don't move text layout */
-.emby-scroller .itemsContainer .card.card-hoverable .cardScalable {
-  animation: holyfin-float 9s ease-in-out infinite alternate;
-}
-
-/* Stagger timings so it doesn't look synchronized */
-.emby-scroller .itemsContainer .card.card-hoverable:nth-child(3n) .cardScalable {
-  animation-duration: 11s;
-  animation-delay: -2s;
-}
-.emby-scroller .itemsContainer .card.card-hoverable:nth-child(4n) .cardScalable {
-  animation-duration: 13s;
-  animation-delay: -4s;
-}
-.emby-scroller .itemsContainer .card.card-hoverable:nth-child(5n) .cardScalable {
-  animation-duration: 10s;
-  animation-delay: -6s;
-}
-
-/* Important: Hover should override floating cleanly */
-.emby-scroller .itemsContainer .card.card-hoverable:hover .cardScalable,
-.emby-scroller .itemsContainer .card.card-hoverable:focus-within .cardScalable {
-  animation-play-state: paused;
-}
-
-
-/* ================================
-   5) Accessibility: Reduced Motion
+   4) Accessibility: Reduced Motion
    ================================ */
 
 @media (prefers-reduced-motion: reduce) {
