@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v2.0.0 - Premium Parallax Hover */
+/* Version: Deep Blue Clean v2.0.1 - Fixed Shadows */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -337,7 +337,7 @@ body {
     overflow: hidden !important;
     background: transparent !important;
     backdrop-filter: none !important; /* Removed glassmorphism blur */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important; /* Subtle base shadow */
+    box-shadow: none !important; /* No shadow by default */
     transition: transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 200ms cubic-bezier(0.2, 0.8, 0.2, 1);
     will-change: transform; /* GPU acceleration */
 }
@@ -475,14 +475,14 @@ body {
     .overflowBackdropCard:hover .cardScalable,
     .card:hover .cardScalable {
         transform: none !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+        box-shadow: none !important; /* No shadow on mobile hover */
     }
 
     .card-hoverable:active .cardScalable,
     .overflowBackdropCard:active .cardScalable,
     .card:active .cardScalable {
         transform: scale(0.98) !important;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+        box-shadow: none !important; /* No shadow on mobile */
     }
 }
 
