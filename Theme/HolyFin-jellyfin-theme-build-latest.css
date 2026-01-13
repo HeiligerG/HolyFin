@@ -458,107 +458,6 @@ body {
     box-shadow: none !important;
 }
 
-/* ================================
-   1) Old "glass/gradient sweep" hover OFF
-   ================================ */
-
-/* If your theme used this toggle, disable it globally */
-:root {
-  --cardHoverEffect: none; /* was "" */
-}
-
-/* Safety: ensure the pseudo overlay doesn't render */
-.cardOverlayContainer:after {
-  content: none !important;
-  background: transparent !important;
-  opacity: 0 !important;
-  transform: none !important;
-}
-
-
-/* ================================
-   2) Parallax Hover (Premium Depth)
-   Targets all cards in scrollers/rows
-   ================================ */
-
-.emby-scroller .itemsContainer .card.card-hoverable {
-  /* give 3D context */
-  perspective: 800px;
-}
-
-.emby-scroller .itemsContainer .card.card-hoverable .cardScalable {
-  transform-origin: center;
-  transform-style: preserve-3d;
-  will-change: transform, filter, box-shadow;
-  transition:
-    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    filter 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    box-shadow 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-/* Hover / keyboard focus */
-.emby-scroller .itemsContainer .card.card-hoverable:hover .cardScalable,
-.emby-scroller .itemsContainer .card.card-hoverable:focus-within .cardScalable {
-  transform: perspective(800px) rotateY(4deg) rotateX(2deg) scale(1.04);
-  filter: brightness(1.07) saturate(1.03);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.45);
-}
-
-/* Click */
-.emby-scroller .itemsContainer .card.card-hoverable:active .cardScalable {
-  transform: perspective(800px) rotateY(0deg) rotateX(0deg) scale(1.02);
-  transition-duration: 90ms;
-}
-
-
-/* ================================
-   3) Smart Focus Hover (Netflix-Style)
-   Only affects siblings INSIDE the same itemsContainer row
-   Requires :has() support (modern Chrome/Edge/Safari)
-   ================================ */
-
-/* Smart Focus: dim ONLY siblings that are NOT hovered */
-.emby-scroller .itemsContainer:has(.card.card-hoverable:hover)
-  .card.card-hoverable:not(:hover) .cardScalable {
-  transform: scale(0.985);
-  filter: brightness(0.88) saturate(0.96);
-}
-
-/* Hovered card stays bright + gets premium lift */
-.emby-scroller .itemsContainer .card.card-hoverable:hover .cardScalable {
-  transform: perspective(800px) rotateY(4deg) rotateX(2deg) scale(1.06);
-  filter: brightness(1.10) saturate(1.05);
-  box-shadow: 0 22px 55px rgba(0,0,0,0.5);
-}
-
-/* Optional: bring hovered above neighbors */
-.emby-scroller .itemsContainer .card.card-hoverable {
-  position: relative;
-  z-index: 0;
-}
-.emby-scroller .itemsContainer .card.card-hoverable:hover {
-  z-index: 3;
-}
-
-/* ================================
-   4) Accessibility: Reduced Motion
-   ================================ */
-
-@media (prefers-reduced-motion: reduce) {
-  .emby-scroller .itemsContainer .card.card-hoverable .cardScalable {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-    filter: none !important;
-    box-shadow: none !important;
-  }
-
-  .emby-scroller .itemsContainer:has(.card.card-hoverable:hover) .card.card-hoverable .cardScalable {
-    transform: none !important;
-    filter: none !important;
-  }
-}
-
 .cardOverlayContainer > .cardOverlayFab-primary {
     left: unset;
     margin-left: unset;
@@ -4551,6 +4450,106 @@ h3.pageTitle:focus-visible {
     opacity: 0.7;
 }
 
+/* ================================
+   1) Old "glass/gradient sweep" hover OFF
+   ================================ */
+
+/* If your theme used this toggle, disable it globally */
+:root {
+  --cardHoverEffect: none; /* was "" */
+}
+
+/* Safety: ensure the pseudo overlay doesn't render */
+.cardOverlayContainer:after {
+  content: none !important;
+  background: transparent !important;
+  opacity: 0 !important;
+  transform: none !important;
+}
+
+
+/* ================================
+   2) Parallax Hover (Premium Depth)
+   Targets all cards in scrollers/rows
+   ================================ */
+
+.emby-scroller .itemsContainer .card.card-hoverable {
+  /* give 3D context */
+  perspective: 800px;
+}
+
+.emby-scroller .itemsContainer .card.card-hoverable .cardScalable {
+  transform-origin: center;
+  transform-style: preserve-3d;
+  will-change: transform, filter, box-shadow;
+  transition:
+    transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Hover / keyboard focus */
+.emby-scroller .itemsContainer .card.card-hoverable:hover .cardScalable,
+.emby-scroller .itemsContainer .card.card-hoverable:focus-within .cardScalable {
+  transform: perspective(800px) rotateY(4deg) rotateX(2deg) scale(1.04);
+  filter: brightness(1.07) saturate(1.03);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.45);
+}
+
+/* Click */
+.emby-scroller .itemsContainer .card.card-hoverable:active .cardScalable {
+  transform: perspective(800px) rotateY(0deg) rotateX(0deg) scale(1.02);
+  transition-duration: 90ms;
+}
+
 /* ========================================= */
 /* HOLYFIN CUSTOM ENHANCEMENTS - END        */
 /* ========================================= */
+
+/* ================================
+   3) Smart Focus Hover (Netflix-Style)
+   Only affects siblings INSIDE the same itemsContainer row
+   Requires :has() support (modern Chrome/Edge/Safari)
+   ================================ */
+
+/* Smart Focus: dim ONLY siblings that are NOT hovered */
+.emby-scroller .itemsContainer:has(.card.card-hoverable:has(:hover))
+  .card.card-hoverable:not(:has(:hover)) .cardScalable {
+  transform: scale(0.985);
+  filter: brightness(0.88) saturate(0.96);
+}
+
+/* Active card (any descendant hovered) stays bright + lifted */
+.emby-scroller .itemsContainer .card.card-hoverable:has(:hover) .cardScalable {
+  transform: perspective(800px) rotateY(4deg) rotateX(2deg) scale(1.06);
+  filter: brightness(1.10) saturate(1.05);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.5);
+}
+
+/* Optional: bring active above neighbors */
+.emby-scroller .itemsContainer .card.card-hoverable {
+  position: relative;
+  z-index: 0;
+}
+.emby-scroller .itemsContainer .card.card-hoverable:has(:hover) {
+  z-index: 3;
+}
+
+/* ================================
+   4) Accessibility: Reduced Motion
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .emby-scroller .itemsContainer .card.card-hoverable .cardScalable {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    box-shadow: none !important;
+  }
+
+  .emby-scroller .itemsContainer:has(.card.card-hoverable:hover) .card.card-hoverable .cardScalable {
+    transform: none !important;
+    filter: none !important;
+  }
+}
