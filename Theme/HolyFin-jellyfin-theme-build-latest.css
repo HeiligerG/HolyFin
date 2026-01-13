@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.2.0 - Fixed All Progress Bars */
+/* Version: Deep Blue Clean v1.2.1 - Hidden Desktop Markers */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -1831,20 +1831,38 @@ progress + span {
 }
 
 .sliderMarkerContainer {
-    margin: 0 !important; /* Remove margins to prevent artifacts */
+    display: none !important; /* Hide chapter/intro markers completely on desktop */
 }
 
 .sliderMarker.watched {
-    background-color: var(--osdSeekBarPlayedColor);
-    margin: 0 !important;
-    box-shadow: none !important;
+    display: none !important;
 }
 
 .sliderMarker {
-    height: 4px;
-    border-radius: 999px !important; /* Smooth rounded edges */
-    margin: 0 !important;
-    overflow: hidden !important;
+    display: none !important;
+}
+
+/* Show markers on mobile - they work better there */
+@media (max-width: 768px) {
+    .sliderMarkerContainer {
+        display: block !important;
+        margin: 0 !important;
+    }
+
+    .sliderMarker.watched {
+        display: block !important;
+        background-color: var(--osdSeekBarPlayedColor);
+        margin: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .sliderMarker {
+        display: block !important;
+        height: 4px;
+        border-radius: 999px !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+    }
 }
 
 .iconOsdProgressInner {
