@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.1.1 - Fixed Progress Bar & Play Button */
+/* Version: Deep Blue Clean v1.1.2 - Clean Progress Bar */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -1706,8 +1706,8 @@ html,
 }
 
 .itemProgressBar:not(.backgroundProgress):not(.playbackProgress):not(.transcodingProgress) {
-    backdrop-filter: var(--blurLarge);
-    background-color: rgba(150, 150, 150, 0.4) !important; /* Light gray background for unwatched - more visible */
+    backdrop-filter: none !important; /* Remove blur to prevent artifacts */
+    background-color: rgba(200, 200, 200, 0.5) !important; /* Clean light gray for unwatched */
     height: 0.35em;
     overflow: hidden;
     border-radius: var(--largeRadius);
@@ -1725,7 +1725,7 @@ html,
 
 .itemProgressBarForeground {
     border-radius: 0 var(--largeRadius) var(--largeRadius) 0;
-    background-color: #1e3a8a !important; /* Dark blue for watched portion */
+    background-color: #2563eb !important; /* Bright blue for watched portion - more visible */
 }
 
 .backgroundProgress > div,
