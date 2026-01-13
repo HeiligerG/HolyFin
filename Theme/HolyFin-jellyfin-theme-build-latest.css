@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.1.3 - Restored Progress Bar */
+/* Version: Deep Blue Clean v1.2.0 - Fixed All Progress Bars */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -51,9 +51,9 @@
     /* HolyFin Primary Colors */
     --activeColorAlpha: rgba(37, 99, 235, 0.9);
     --activeColor: rgb(37, 99, 235);
-    --osdSeekBarPlayedColor: var(--holyfin-blue-600);
-    --osdSeekBarBufferedColorAlpha: rgba(59, 130, 246, 0.4);
-    --osdSeekBarThumbColor: var(--holyfin-blue-500);
+    --osdSeekBarPlayedColor: #1e3a8a; /* Dark blue for WATCHED/PLAYED portion */
+    --osdSeekBarBufferedColorAlpha: rgba(255, 255, 255, 0.3); /* Light gray/white for UNWATCHED portion */
+    --osdSeekBarThumbColor: #2563eb; /* Blue slider thumb */
     --tableBodyColor: rgba(23, 37, 84, 0.8);
     --uiAccentColor: rgb(37, 99, 235);
     --btnMiniPlayColor: #2563eb; /* Blue play button on cards */
@@ -1779,11 +1779,12 @@ progress + span {
 
 /* this is the osd player slider */
 .mdl-slider-background-flex {
-    border-radius: var(--smallRadius);
+    border-radius: 999px !important; /* Smooth rounded edges */
     height: 0.4em;
     margin-top: -0.2em;
     background: var(--osdSeekBarBufferedColorAlpha);
     transition: 0.2s linear;
+    overflow: hidden !important;
 }
 
 .sliderContainer:active .mdl-slider-background-flex {
@@ -1793,10 +1794,14 @@ progress + span {
 
 .mdl-slider-background-lower {
     background-color: var(--osdSeekBarPlayedColor);
+    border-radius: 0 !important;
+    margin: 0 !important;
 }
 
 .mdl-slider-background-upper {
     background-color: var(--osdSeekBarBufferedColorAlpha);
+    border-radius: 0 !important;
+    margin: 0 !important;
 }
 
 .mdl-slider::-webkit-slider-thumb {
@@ -1826,16 +1831,20 @@ progress + span {
 }
 
 .sliderMarkerContainer {
-    margin: 0 0.1em;
+    margin: 0 !important; /* Remove margins to prevent artifacts */
 }
 
 .sliderMarker.watched {
     background-color: var(--osdSeekBarPlayedColor);
+    margin: 0 !important;
+    box-shadow: none !important;
 }
 
 .sliderMarker {
     height: 4px;
-    border-radius: 2px;
+    border-radius: 999px !important; /* Smooth rounded edges */
+    margin: 0 !important;
+    overflow: hidden !important;
 }
 
 .iconOsdProgressInner {
