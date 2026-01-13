@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v2.0.1 - Fixed Shadows */
+/* Version: Deep Blue Clean v2.1.0 - Living UI with Floating Animation */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -483,6 +483,59 @@ body {
     .card:active .cardScalable {
         transform: scale(0.98) !important;
         box-shadow: none !important; /* No shadow on mobile */
+    }
+}
+
+/* === IDLE FLOATING ANIMATION - SUBTLE LIVING UI === */
+/* Keyframe for gentle floating motion */
+@keyframes cardFloating {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Apply floating animation to cards with different delays for variety */
+.card-hoverable .cardScalable,
+.overflowBackdropCard .cardScalable,
+.card .cardScalable {
+    animation: cardFloating 8s ease-in-out infinite;
+}
+
+/* Staggered delays for cards to create natural wave effect */
+.card-hoverable:nth-child(2n) .cardScalable,
+.overflowBackdropCard:nth-child(2n) .cardScalable {
+    animation-delay: -2s;
+    animation-duration: 9s;
+}
+
+.card-hoverable:nth-child(3n) .cardScalable,
+.overflowBackdropCard:nth-child(3n) .cardScalable {
+    animation-delay: -4s;
+    animation-duration: 10s;
+}
+
+.card-hoverable:nth-child(5n) .cardScalable,
+.overflowBackdropCard:nth-child(5n) .cardScalable {
+    animation-delay: -6s;
+    animation-duration: 11s;
+}
+
+/* Pause floating on hover - parallax takes priority */
+.card-hoverable:hover .cardScalable,
+.overflowBackdropCard:hover .cardScalable,
+.card:hover .cardScalable {
+    animation-play-state: paused;
+}
+
+/* Disable floating for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .card-hoverable .cardScalable,
+    .overflowBackdropCard .cardScalable,
+    .card .cardScalable {
+        animation: none !important;
     }
 }
 
@@ -2384,7 +2437,7 @@ progress + span {
 
 .defaultCardBackground,
 .cardScalable {
-    background: var(--cardBackgroundGradient);
+    background: transparent !important; /* Removed glassmorphic gradient */
 }
 
 div[data-type="Book"] .play_arrow:before {
