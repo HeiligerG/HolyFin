@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.0.10 - Fixed Placeholder Flash */
+/* Version: Deep Blue Clean v1.1.0 - UI Refinements */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -333,7 +333,7 @@ body {
 
 .cardScalable {
     border-radius: 16px;
-    border: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Subtle border for cards */
     overflow: hidden !important;
     background: transparent !important;
     backdrop-filter: blur(10px);
@@ -355,7 +355,7 @@ body {
 }
 
 .layout-mobile .cardScalable {
-    border: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Subtle border for mobile cards too */
 }
 
 .visualCardBox,
@@ -1705,7 +1705,7 @@ html,
 
 .itemProgressBar:not(.backgroundProgress):not(.playbackProgress):not(.transcodingProgress) {
     backdrop-filter: var(--blurLarge);
-    background-color: var(--osdSeekBarBufferedColorAlpha) !important;
+    background-color: rgba(255, 255, 255, 0.2) !important; /* Gray/white background for unwatched */
     height: 0.35em;
     overflow: hidden;
     border-radius: var(--largeRadius);
@@ -1723,7 +1723,7 @@ html,
 
 .itemProgressBarForeground {
     border-radius: 0 var(--largeRadius) var(--largeRadius) 0;
-    background-color: var(--dimTextColor);
+    background-color: #1e3a8a !important; /* Dark blue for watched portion */
 }
 
 .backgroundProgress > div,
@@ -2410,14 +2410,15 @@ div[data-type="PhotoAlbum"] .play_arrow:before {
 }
 
 .btnPlay.detailButton {
-    background-color: var(--textColor);
-    color: black;
+    background-color: #2563eb !important; /* Blue play button */
+    color: white !important;
     border-radius: 3em;
-    border-color: var(--borderColor);
+    border-color: #1e40af;
     height: 3em;
     min-width: 10em;
     margin-right: 0.5em !important;
     flex-direction: row;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 .btnPlay:not(.formDialogFooterItem):not(.play-button):after {
@@ -3190,8 +3191,9 @@ div[data-role="controlgroup"] a.ui-btn-active {
     }
 
     .btnPlay.detailButton:hover {
-        background-color: var(--textColor);
-        color: black;
+        background-color: #1d4ed8 !important;
+        color: white !important;
+        box-shadow: 0 6px 16px rgba(37, 99, 235, 0.5);
     }
 
     .alphaPickerButton:hover {
@@ -4301,9 +4303,6 @@ h3.pageTitle:focus-visible {
     width: 100%;
     height: 50vh;
     text-align: center;
-    /* Prevent flash on load - only show after content is loaded */
-    opacity: 0;
-    animation: fadeInPlaceholder 0.3s ease-in 0.5s forwards;
 }
 
 .itemsContainer:empty::after,
@@ -4316,19 +4315,6 @@ h3.pageTitle:focus-visible {
     font-size: 1.5em;
     color: rgba(255, 255, 255, 0.3);
     font-weight: 300;
-    /* Prevent flash on load - only show after content is loaded */
-    opacity: 0;
-    animation: fadeInPlaceholder 0.3s ease-in 0.5s forwards;
-}
-
-/* Fade in animation for placeholder */
-@keyframes fadeInPlaceholder {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 /* === ENHANCED INDIGO ANIMATIONS === */
