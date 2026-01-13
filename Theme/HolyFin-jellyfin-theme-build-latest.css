@@ -4507,32 +4507,44 @@ h3.pageTitle:focus-visible {
 /* ========================================= */
 
 /* ================================
-   3) Smart Focus Hover (Netflix-Style)
-   Only affects siblings INSIDE the same itemsContainer row
-   Requires :has() support (modern Chrome/Edge/Safari)
+   Smart Focus Hover (Netflix-Style) – Jellyfin robust
+   Trigger = .cardScalable:hover / :focus-within
    ================================ */
 
-/* Smart Focus: dim ONLY siblings that are NOT hovered */
-.emby-scroller .itemsContainer:has(.card.card-hoverable:has(:hover))
-  .card.card-hoverable:not(:has(:hover)) .cardScalable {
+/* 1) Wenn irgendwo in der Reihe eine Card aktiv ist: dimme nur die anderen */
+.emby-scroller .itemsContainer:has(.cardScalable:hover) 
+  .cardScalable:not(:hover) {
   transform: scale(0.985);
   filter: brightness(0.88) saturate(0.96);
 }
 
-/* Active card (any descendant hovered) stays bright + lifted */
-.emby-scroller .itemsContainer .card.card-hoverable:has(:hover) .cardScalable {
+/* 2) Aktive Card (hover) gewinnt */
+.emby-scroller .itemsContainer .cardScalable:hover {
   transform: perspective(800px) rotateY(4deg) rotateX(2deg) scale(1.06);
   filter: brightness(1.10) saturate(1.05);
   box-shadow: 0 22px 55px rgba(0,0,0,0.5);
 }
 
-/* Optional: bring active above neighbors */
-.emby-scroller .itemsContainer .card.card-hoverable {
+/* 3) Optional: aktive Card über Nachbarn */
+.emby-scroller .itemsContainer .card.card-hoverable { 
   position: relative;
   z-index: 0;
 }
-.emby-scroller .itemsContainer .card.card-hoverable:has(:hover) {
+.emby-scroller .itemsContainer .card.card-hoverable:has(.cardScalable:hover) {
   z-index: 3;
+}
+
+/* 4) Fokus (Keyboard/Remote) */
+.emby-scroller .itemsContainer:has(.card.card-hoverable:focus-within)
+  .card.card-hoverable:not(:focus-within) .cardScalable {
+  transform: scale(0.985);
+  filter: brightness(0.88) saturate(0.96);
+}
+
+.emby-scroller .itemsContainer .card.card-hoverable:focus-within .cardScalable {
+  transform: perspective(800px) rotateY(4deg) rotateX(2deg) scale(1.06);
+  filter: brightness(1.10) saturate(1.05);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.5);
 }
 
 /* ================================
