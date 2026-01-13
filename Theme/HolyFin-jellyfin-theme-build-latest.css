@@ -517,25 +517,7 @@ body {
    Requires :has() support (modern Chrome/Edge/Safari)
    ================================ */
 
-.emby-scroller .itemsContainer:has(.card.card-hoverable:hover) .card.card-hoverable .cardScalable {
-  transform: scale(0.985);
-}
-
-/* hovered card wins */
-.emby-scroller .itemsContainer:has(.card.card-hoverable:hover) .card.card-hoverable:hover .cardScalable {
-  transform: perspective(800px) rotateY(4deg) rotateX(2deg) scale(1.06);
-  filter: brightness(1.10) saturate(1.05);
-  box-shadow: 0 22px 55px rgba(0,0,0,0.5);
-}
-
-/* Optional: bring hovered above neighbors */
-.emby-scroller .itemsContainer .card.card-hoverable {
-  position: relative;
-  z-index: 0;
-}
-.emby-scroller .itemsContainer .card.card-hoverable:hover {
-  z-index: 3;
-}
+/* Card hover effects disabled - set via --cardHoverEffect: none */
 
 
 /* ================================
