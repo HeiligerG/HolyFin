@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.1.0 - UI Refinements */
+/* Version: Deep Blue Clean v1.1.1 - Fixed Progress Bar & Play Button */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -56,8 +56,8 @@
     --osdSeekBarThumbColor: var(--holyfin-blue-500);
     --tableBodyColor: rgba(23, 37, 84, 0.8);
     --uiAccentColor: rgb(37, 99, 235);
-    --btnMiniPlayColor: var(--holyfin-cyan-500);
-    --btnMiniPlayBorderColor: var(--holyfin-cyan-400);
+    --btnMiniPlayColor: #2563eb; /* Blue play button on cards */
+    --btnMiniPlayBorderColor: #1e40af;
 
     /* Base component colors */
     --btnDeleteColor: rgb(169, 29, 29);
@@ -524,13 +524,15 @@ body {
     border: var(--defaultLighterBorder);
     border-color: var(--btnMiniPlayBorderColor);
     font-size: 75%;
-    box-shadow: var(--shadow);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4); /* Blue glow for play button */
     z-index: 2;
 }
 
 .cardOverlayContainer > .cardOverlayFab-primary:hover,
 .listItemImageButton:hover {
     color: white;
+    background-color: #1d4ed8 !important; /* Darker blue on hover */
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.6); /* Stronger glow on hover */
 }
 
 .cardOverlayButton-br .cardOverlayButton-hover[data-action="menu"],
@@ -1705,7 +1707,7 @@ html,
 
 .itemProgressBar:not(.backgroundProgress):not(.playbackProgress):not(.transcodingProgress) {
     backdrop-filter: var(--blurLarge);
-    background-color: rgba(255, 255, 255, 0.2) !important; /* Gray/white background for unwatched */
+    background-color: rgba(150, 150, 150, 0.4) !important; /* Light gray background for unwatched - more visible */
     height: 0.35em;
     overflow: hidden;
     border-radius: var(--largeRadius);
