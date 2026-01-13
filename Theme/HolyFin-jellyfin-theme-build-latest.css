@@ -1,6 +1,6 @@
 /* HolyFin Theme for Jellyfin - Elegant Deep Blue Edition */
 /* Based on ElegantFin by lscambo13 - Customized by HolyG */
-/* Version: Deep Blue Clean v1.2.1 - Hidden Desktop Markers */
+/* Version: Deep Blue Clean v2.0.0 - Premium Parallax Hover */
 
 /* Add-ons: Uncomment to enable */
 /* @import url(./assets/add-ons/media-bar-plugin-support-nightly.css); */
@@ -336,9 +336,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Subtle border for cards */
     overflow: hidden !important;
     background: transparent !important;
-    backdrop-filter: blur(10px);
-    box-shadow: none !important;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: none !important; /* Removed glassmorphism blur */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important; /* Subtle base shadow */
+    transition: transform 200ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 200ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform; /* GPU acceleration */
 }
 
 @supports (aspect-ratio: 1 / 1) {
@@ -409,14 +410,14 @@ body {
     opacity: 1 !important;
 }
 
-/* === CLEAN HOVER EFFECTS - NO BLUE SHADOWS === */
+/* === PREMIUM PARALLAX 3D HOVER - APPLE TV / NETFLIX STYLE === */
 .card-hoverable:hover .cardScalable,
 .overflowBackdropCard:hover .cardScalable,
 .card:hover .cardScalable {
-    transform: translateY(-8px) scale(1.02);
+    transform: perspective(800px) rotateY(4deg) rotateX(2deg) scale(1.03) !important;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35), 0 8px 16px rgba(0, 0, 0, 0.25) !important;
     background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
 }
 
 .card-hoverable:hover .visualCardBox,
@@ -431,14 +432,58 @@ body {
 .overflowBackdropCard:hover .visualCardBox .cardScalable,
 .card:hover .visualCardBox .cardScalable {
     border: none !important;
-    box-shadow: none !important;
 }
 
 .card-hoverable:hover .cardImageContainer,
 .overflowBackdropCard:hover .cardImageContainer,
 .card:hover .cardImageContainer {
-    transform: scale(1.05);
-    filter: brightness(1.1) contrast(1.05);
+    transform: scale(1.02);
+    filter: brightness(1.08) contrast(1.03);
+}
+
+/* Focus-visible gets same parallax effect for accessibility */
+.card-hoverable:focus-visible .cardScalable,
+.overflowBackdropCard:focus-visible .cardScalable,
+.card:focus-visible .cardScalable {
+    transform: perspective(800px) rotateY(4deg) rotateX(2deg) scale(1.03) !important;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35), 0 8px 16px rgba(0, 0, 0, 0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    outline: 2px solid rgba(37, 99, 235, 0.6);
+    outline-offset: 2px;
+}
+
+/* Accessibility: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .card-hoverable:hover .cardScalable,
+    .overflowBackdropCard:hover .cardScalable,
+    .card:hover .cardScalable,
+    .card-hoverable:focus-visible .cardScalable,
+    .overflowBackdropCard:focus-visible .cardScalable,
+    .card:focus-visible .cardScalable {
+        transform: scale(1.02) !important; /* No 3D rotation, only subtle scale */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    .cardScalable {
+        transition: transform 100ms ease, box-shadow 100ms ease !important;
+    }
+}
+
+/* Mobile: No hover effects, only active state */
+@media (max-width: 768px) {
+    .card-hoverable:hover .cardScalable,
+    .overflowBackdropCard:hover .cardScalable,
+    .card:hover .cardScalable {
+        transform: none !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .card-hoverable:active .cardScalable,
+    .overflowBackdropCard:active .cardScalable,
+    .card:active .cardScalable {
+        transform: scale(0.98) !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+    }
 }
 
 /* Remove all blue backgrounds and borders from all card types */
